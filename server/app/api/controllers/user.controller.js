@@ -1,0 +1,84 @@
+const User = require('../models/user.model.js');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const httpStatusCode = require('../../utils/httpStatusCode');
+const { validationResult } = require('express-validator');
+
+//Registro de usuario
+const registerUser = async (req, res, next) => {
+    try {
+        const newUser = new User();
+        newUser.name = req.body.name;
+        newUser.email = req.body.email;
+        newUser.password = req.body.password;
+        newUser.avatar = req.body.avatar;
+        newUser.children = req.body.children;
+        newUser.birthDate = req.body.birthDate;
+        newUser.profession = req.body.profession;
+        const userDb = await newUser.save();
+        res.json({
+            status: 201,
+            message: httpStatusCode[201],
+            data: null,
+        })
+    } catch (error) {
+        next(error);        
+    }
+};
+
+
+const loginUser = async (req, res, next) => {
+    try {
+        const userInfo = await User.findOne({email: req.body.email})
+        if(!userInfo) {
+            return res.status(401).json({
+                message: "Authentication failed"
+            })
+        }
+        if (bcrypt.compareSync(req.body.password, userInfo.password)) {
+            userInfo.password = null;
+            const token = jwt.sign(
+                {
+                    id: userInfo._id,
+                    email: userInfo.email,  
+                },
+                "longer-secret-is-better",
+                {
+                    expiresIn: 3600000,
+                }
+            );
+            res.status(200).json({
+                token: token,
+                expiresIn: 3600000,
+                data: { user: userInfo}
+            })
+        } else {
+            return res.json({
+                status: 400,
+                message: httpStatusCode[400],
+                data: null,
+            })
+        }
+        
+    } catch (error) {
+        next(error)
+    }
+}
+
+const logoutUser = (req, res, next) => {
+    try {
+        return res.json({
+            status: 200,
+            message: httpStatusCode[200],
+            token: null,
+        });
+    } catch (error) {
+        next(error)
+    }
+};
+
+module.exports = {
+    registerUser,
+    loginUser,
+    logoutUser
+}
