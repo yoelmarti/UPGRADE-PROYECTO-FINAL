@@ -5,35 +5,22 @@ const uniqueValidator = require('mongoose-unique-validator');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
-const userSchema = new Schema({
-    name: {
-        type: String, 
-        required: true
+const userSchema = new Schema(
+    {
+        name: { type: String, required: true },
+        email: { type: String, required: true, unique: true }, //Indicamos que el campo email sólo puede tenerlo un usuario
+        password: { type: String, required: true },
+        avatar: { type: String },
+        children: { type: Number, required: true },
+        birthdate: { type: Date },
+        profession: { type: String },
+        // house: [ { type: mongoose.Types.ObjectId, ref: 'houses' }],
     },
-    email: {
-        type: String,
-        required: true,
-        unique: true //indicamos que solo puede haber un usuario con un email único
-    },
-    password: {
-        type: String,
-        required: true
-    },
-    avatar: {
-        type: String
-    },
-    children: {
-        type: Number,
-        required: true
-    },
-    birthDate: {
-        type: Date,
-    },
-    profession: {
-        type: String
+    {
+        timestamps: true,
+        collection: 'users'
     }
-
-});
+);
 
 userSchema.plugin(uniqueValidator, {message: 'Email already in use.'}); //
 userSchema.pre('save', async function (next) {
