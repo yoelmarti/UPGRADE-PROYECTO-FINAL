@@ -27,7 +27,7 @@ const routes = [
     },
     {
         path: "/iniciar-sesion",
-        element: <LogIn/> 
+        element: <LogIn/>
     },
     {
         path: "*",
