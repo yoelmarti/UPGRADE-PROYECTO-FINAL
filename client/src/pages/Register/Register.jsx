@@ -6,10 +6,10 @@ const INITIAL_STATE_REGISTER = {
     name: '',
     email: '',
     password: '',
-    birthDate: '',
+    birthdate: '',
     profession:'',
-    sons:'',
-    photo: '',
+    children:'',
+    avatar: '',
 
 }
 
@@ -24,10 +24,10 @@ const Register = () => {
             name: registerFormData.name,
             email: registerFormData.email,
             password: registerFormData.password,
-            birthDate: registerFormData.birthDate,
+            birthdate: registerFormData.birthdate,
             profession: registerFormData.profession,
-            sons: registerFormData.sons,
-            photo: registerFormData.photo,
+            children: registerFormData.children,
+            avatar: registerFormData.avatar,
         }
 
     const registerUser = async () => {
@@ -79,7 +79,7 @@ const Register = () => {
 
                 <label>
                     <p>Fecha de Nacimiento</p>
-                    <input type='date' name='birthDate' value={registerFormData.birthDate} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black'></input>
+                    <input type='date' name='birthdate' value={registerFormData.birthdate} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black'></input>
                 </label>
 
                 <label>
@@ -89,12 +89,12 @@ const Register = () => {
 
                 <label>
                     <p>Hijos</p>
-                    <input type='text' name='sons' value={registerFormData.sons} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black'></input>
+                    <input type='text' name='children' value={registerFormData.children} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black'></input>
                 </label>
 
                 <label>
                     <p>Foto de Perfil</p>
-                    <input type='file' name='photo' value={registerFormData.photo} onChange={handleInput} ></input>
+                    <input type='file' name='avatar' value={registerFormData.avatar} onChange={handleInput} ></input>
                 </label>
 
                 <label>

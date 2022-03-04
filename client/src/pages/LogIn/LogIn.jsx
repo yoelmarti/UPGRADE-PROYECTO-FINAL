@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom';
+import { UserContextLogin } from '../../contexts/UserContext/UserContextLogin';
 
 //Estado inicial del obj del login
 const INITIAL_STATE_LOGIN = {
@@ -8,16 +9,20 @@ const INITIAL_STATE_LOGIN = {
 }
 
 const LogIn = () => {
-const [loginData, setLoginData] = useState(INITIAL_STATE_LOGIN)
+    const { loginUser } = useContext(UserContextLogin)
+    const { state } = useLocation();
+    const [loginData, setLoginData] = useState(INITIAL_STATE_LOGIN);
 
 const submitForm = (ev) => {
     ev.preventDefault();
+    loginUser(loginData, state ? state.prevRoute : null);
+    setLoginData(INITIAL_STATE_LOGIN)
 };
 
 const handleInput = (ev) => {
     const {name, value} = ev.target;
-    setLoginData({...loginData, [name]: value} )
-    console.log(loginData.email)
+    setLoginData({...loginData, [name]: value})
+    // console.log(loginData.email)
 };
     
 return (
