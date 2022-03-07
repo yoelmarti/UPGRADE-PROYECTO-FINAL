@@ -8,7 +8,7 @@ let houseSchema = new Schema(
         rooms: { type: Number, required: true },
         bathrooms: { type: Number },
         availability: { type: Boolean, required: true },
-        village: [ { type: mongoose.Types.ObjectId, ref: 'Villages' }],
+        village: [ { type: mongoose.Types.ObjectId, ref: 'villages' }],
     }, 
     {
         timestamps: true,
