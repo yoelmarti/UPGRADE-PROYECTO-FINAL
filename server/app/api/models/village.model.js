@@ -17,7 +17,8 @@ let villageSchema = new Schema(
                 phone: { type: String, required: true },
                 email: { type: String }
         },
-        houses: [ { type: mongoose.Types.ObjectId, ref: 'House' }],
+        image: {type: String},
+        houses: [ { type: mongoose.Types.ObjectId, ref: 'houses' }],
 
     }, 
     {
