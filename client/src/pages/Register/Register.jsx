@@ -94,7 +94,7 @@ const Register = () => {
 
                 <label>
                     <p>Foto de Perfil</p>
-                    <input type='file' name='avatar' value={registerFormData.avatar} onChange={handleInput} ></input>
+                    <input placeholder='debes introducir url' type='text' name='avatar' value={registerFormData.avatar} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black' ></input>
                 </label>
 
                 <label>
