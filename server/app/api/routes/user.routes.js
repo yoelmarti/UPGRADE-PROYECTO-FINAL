@@ -7,7 +7,9 @@ const { check, validationResult } = require('express-validator');
 const {
     registerUser,
     loginUser,
-    logoutUser
+    logoutUser,
+    getUserProfile,
+    updateUserData
 } = require('../controllers/user.controller');
 
 
@@ -29,5 +31,7 @@ registerUser);
 
 router.post('/login', loginUser);
 router.post('/logout', [isAuth], logoutUser);
+router.get('/:id/profile', [isAuth], getUserProfile);
+router.put('/update-user/:id', [isAuth], updateUserData);
 
 module.exports = router;

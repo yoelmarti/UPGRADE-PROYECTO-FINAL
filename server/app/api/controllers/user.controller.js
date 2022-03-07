@@ -59,7 +59,6 @@ const loginUser = async (req, res, next) => {
                 data: null,
             })
         }
-        
     } catch (error) {
         next(error)
     }
@@ -77,8 +76,51 @@ const logoutUser = (req, res, next) => {
     }
 };
 
+
+const getUserProfile = async (req, res, next) => {
+    try {
+        const userId = req.params.id;
+        const user = await User.findById(userId);
+        return res.json({
+            status: 200,
+            message: httpStatusCode[200],
+            data: {
+                userId: user._id,
+                email: user.email,
+                password: user.password,
+                avatar: user.avatar,
+                children: user.children,
+                birthdate: user.birthDate,
+                profession: user.profession,
+                houses: user.houses,
+            }
+        })
+    } catch (error) {
+        return next(error);
+    }
+}
+
+
+const updateUserData = async (req, res, next) => {
+    try {
+        const userId = req.params.id;
+        const user = await User.findByIdAndUpdate( userId, {
+            $set: req.body
+        }, {new:true});
+        return res.json({
+            status: 200,
+            message: httpStatusCode[200],
+            data: "User successfully updated"
+        })
+    } catch (error) {
+        return next(error);
+    }
+}
+
 module.exports = {
     registerUser,
     loginUser,
-    logoutUser
+    logoutUser,
+    getUserProfile,
+    updateUserData
 }
