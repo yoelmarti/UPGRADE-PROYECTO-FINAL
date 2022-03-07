@@ -19,7 +19,6 @@ let villageSchema = new Schema(
         },
         image: {type: String},
         houses: [ { type: mongoose.Types.ObjectId, ref: 'houses' }],
-
     }, 
     {
         timestamps: true,

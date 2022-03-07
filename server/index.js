@@ -2,6 +2,8 @@ const express = require('express');
 //Importamos conexión a db y ejecutamos la conexión
 const { PORT } = require('./app/database/connect');
 const userRouter = require('./app/api/routes/user.routes');
+const villageRouter = require('./app/api/routes/village.routes');
+const houseRouter = require('./app/api/routes/house.routes');
 const path = require('path');
 const { connect } = require('./app/database/connect');
 connect();
@@ -22,6 +24,8 @@ server.use(express.urlencoded({ extended: false }));
 
 //Enrutado
 server.use('/users', userRouter);
+server.use('/villages', villageRouter);
+server.use('/houses', houseRouter);
 
 
 //Manejador de errores

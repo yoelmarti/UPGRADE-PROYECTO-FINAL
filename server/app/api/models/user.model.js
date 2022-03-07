@@ -14,7 +14,7 @@ const userSchema = new Schema(
         children: { type: Number, required: true },
         birthdate: { type: Date },
         profession: { type: String },
-        // house: [ { type: mongoose.Types.ObjectId, ref: 'houses' }],
+        houses: [ { type: mongoose.Types.ObjectId, ref: 'houses' }],
     },
     {
         timestamps: true,
