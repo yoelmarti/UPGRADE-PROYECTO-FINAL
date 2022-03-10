@@ -14,7 +14,7 @@ const villages = [
          phone: 945362600,
          email: "kuartango@kuartango.eus"
      },
-    image: "../../../public/images/kuartango.webp",
+    image: "../../../public/kuartango.webp",
     houses: [ { _id: "6224855f48bd96216ef47341" }, { _id: "6224855f48bd96216ef47342" }]    
     }, 
     {
@@ -28,7 +28,7 @@ const villages = [
             phone: 967426222,
             email: "letur@dipualba.es"
         },
-        image: "../../../public/images/letur.webp"      
+        image: "../../../public/letur.webp"      
        }, 
        {
         name: "Elche de la Sierra",
@@ -41,7 +41,7 @@ const villages = [
             phone: 967410001,
             email: "helikejoven@gmail.com"
         },
-        image: "../../../public/images/elche-de-la-sierra.webp"   
+        image: "../../../public/elche-de-la-sierra.webp"   
        }, 
        {
         name: "Madrigal de las Altas Torres",
@@ -54,7 +54,7 @@ const villages = [
             phone: 920320001,
             email: "ayuntamiento@madrigaldelasaltastorres.es"
         },
-        image: "../../../public/images/madrigal-de-las-altas-torres.webp"   
+        image: "../../../public/madrigal-de-las-altas-torres.webp"   
        }, 
        {
         name: "Caleruega",
@@ -67,7 +67,7 @@ const villages = [
             phone: 947534005,
             email: "caleruega.burgos@gmail.com"
         },
-        image: "../../../public/images/caleruega.webp"   
+        image: "../../../public/caleruega.webp"   
        }, 
        {
         name: "Nofuentes",
@@ -92,7 +92,7 @@ const villages = [
             phone: 947406487,
             email: "aytocovarrubias@wanadoo.es"
         },
-        image: "../../../public/images/covarrubias.webp"   
+        image: "../../../public/covarrubias.webp"   
        }, 
        {
         name: "Belorado",
@@ -105,7 +105,7 @@ const villages = [
             phone: 947580226,
             email: "info@belorado.org"
         },
-        image: "../../../public/images/belorado.webp"   
+        image: "../../../public/belorado.webp"   
        }, 
        {
         name: "La Sequera de Haza",
@@ -118,7 +118,7 @@ const villages = [
             phone: 947530701,
             email: "lasequeradehaza@diputaciondeburgos.net"
         },
-        image: "../../../public/images/la-sequera-de-haza.webp"   
+        image: "../../../public/la-sequera-de-haza.webp"   
        }, 
        {
         name: "Gumiel de Izán",
@@ -131,7 +131,7 @@ const villages = [
             phone: 947544111,
             email: "gumieldeizan@diputaciondeburgos.net"
         },
-        image: "../../../public/images/gumiel-de-izan.webp"   
+        image: "../../../public/gumiel-de-izan.webp"   
        }, 
        {
         name: "Huete",
@@ -144,7 +144,7 @@ const villages = [
             phone: 969371005,
             email: "huetesecretario@hotmail.com"
         },
-        image: "../../../public/images/huete.webp"   
+        image: "../../../public/huete.webp"   
        }, 
        {
         name: "Orea",
@@ -157,7 +157,7 @@ const villages = [
             phone: 949836001,
             email: "ayto-orea@ayto-orea.com"
         },
-        image: "../../../public/images/orea.webp"   
+        image: "../../../public/orea.webp"   
        }, 
        {
         name: "Sigüenza",
@@ -170,7 +170,7 @@ const villages = [
             phone: 949390850,
             email: "ayuntamiento@siguenza.es"
         },
-        image: "../../../public/images/siguenza.webp"   
+        image: "../../../public/siguenza.webp"   
        }, 
        {
         name: "Arbancón",
@@ -183,7 +183,7 @@ const villages = [
             phone: 949855192,
             email: "ayuntamientodearbancon@hotmail.es"
         },
-        image: "../../../public/images/arbancon.webp"   
+        image: "../../../public/arbancon.webp"   
        }, 
        {
         name: "Mandayona",
@@ -196,7 +196,7 @@ const villages = [
             phone: 949305002,
             email: "felipec@espublico.com"
         },
-        image: "../../../public/images/mandayona.webp"     
+        image: "../../../public/mandayona.webp"     
        }, 
        {
         name: "Santa Ana la Real",
@@ -209,7 +209,7 @@ const villages = [
             phone: 959122335,
             email: "administracion@santaanalareal.es"
         },
-        image: "../../../public/images/santa-ana-la-real.webp"     
+        image: "../../../public/santa-ana-la-real.webp"     
        }, 
        {
         name: "San Vicente de La Sonsierra",
@@ -222,7 +222,7 @@ const villages = [
             phone: 941334006,
             email: "ayto@sanvicentedelasonsierra.org"
         },
-        image: "../../../public/images/san-vicente-de-la-sonsierra.webp"     
+        image: "../../../public/san-vicente-de-la-sonsierra.webp"     
        }, 
        {
         name: "Nalda",
@@ -235,7 +235,7 @@ const villages = [
             phone: 941447203,
             email: "ayto@aytonalda.org "
         },
-        image: "../../../public/images/nalda.webp"     
+        image: "../../../public/nalda.webp"     
        }, 
        {
         name: "Santa Colomba de Somoza",
@@ -248,7 +248,7 @@ const villages = [
             phone: 987631193,
             email: "aytostacolomba@live.com"
         },
-        image: "../../../public/images/santa-colomba-de-somoza.webp"     
+        image: "../../../public/santa-colomba-de-somoza.webp"     
        }, 
        {
         name: "Fabero",
@@ -261,7 +261,7 @@ const villages = [
             phone: 987550211,
             email: "consultas@fabero.org"
         },
-        image: "../../../public/images/fabero.webp"     
+        image: "../../../public/fabero.webp"     
        }, 
        {
         name: "Tolox",
@@ -274,7 +274,7 @@ const villages = [
             phone: 952487097,
             email: "ayuntamiento@tolox.es"
         },
-        image: "../../../public/images/tolox.webp"     
+        image: "../../../public/tolox.webp"     
        }, 
        {
         name: "Benarrabá",
@@ -287,7 +287,7 @@ const villages = [
             phone: 952150077,
             email: "info@benarraba.es"
         },
-        image: "../../../public/images/benarraba.webp"     
+        image: "../../../public/benarraba.webp"     
        }, 
        {
         name: "Genalguacil",
@@ -300,7 +300,7 @@ const villages = [
             phone: 952152003,
             email: "genalguacil@sopde.es"
         },
-        image: "../../../public/images/genalguacil.webp"     
+        image: "../../../public/genalguacil.webp"     
        }, 
        {
         name: "Los Arcos",
@@ -313,7 +313,7 @@ const villages = [
             phone: 948640803,
             email: "cp.losarc@pnte.cfnavarra.es"
         },
-        image: "../../../public/images/los-arcos.webp"     
+        image: "../../../public/los-arcos.webp"     
        }, 
        {
         name: "Allo",
@@ -326,7 +326,7 @@ const villages = [
             phone: 948523012,
             email: "info@villadeallo.org"
         },
-        image: "../../../public/images/allo.webp"     
+        image: "../../../public/allo.webp"     
        }, 
        {
         name: "Orísoain",
@@ -338,7 +338,7 @@ const villages = [
         contact: {
             phone: 948752012,
             email: "orisoain@animsa.es",
-            image: "../../../public/images/orisoain.webp"  
+            image: "../../../public/orisoain.webp"  
         }   
        }, 
        {
@@ -352,7 +352,7 @@ const villages = [
             phone: 948755034,
             email: "orvetafalla@gmail.com"
         },
-        image: "../../../public/images/berbinzana.webp"     
+        image: "../../../public/berbinzana.webp"     
        }, 
        {
         name: "Milagro",
@@ -365,7 +365,7 @@ const villages = [
             phone: 948861005,
             email: "ayuntamiento@milagro.es"
         },
-        image: "../../../public/images/milagro.webp"     
+        image: "../../../public/milagro.webp"     
        }, 
        {
         name: "Legarda",
@@ -378,7 +378,7 @@ const villages = [
             phone: 948344555,
             email: "legarda@animsa.es"
         },
-        image: "../../../public/images/legarda.webp"     
+        image: "../../../public/legarda.webp"     
        }, 
        {
         name: "Paredes de Nava",
@@ -391,7 +391,7 @@ const villages = [
             phone: 979830049,
             email: "contacto@paredesdenava.org"
         },
-        image: "../../../public/images/paredes-de-nava.webp"     
+        image: "../../../public/paredes-de-nava.webp"     
        }, 
        {
         name: "Aldea del Obispo",
@@ -404,7 +404,7 @@ const villages = [
             phone: 923488302,
             email: "ayto_aldeadelobispo@yahoo.es"
         },
-        image: "../../../public/images/aldea-del-obispo.webp"     
+        image: "../../../public/aldea-del-obispo.webp"     
        }, 
        {
         name: "Sarnago",
@@ -417,7 +417,7 @@ const villages = [
             phone: 689232430,
             email: "sarnago@sarnago.com"
         },
-        image: "../../../public/images/arbancon.webp"     
+        image: "../../../public/arbancon.webp"     
        }, 
        {
         name: "El Burgo de Osma",
@@ -430,7 +430,7 @@ const villages = [
             phone: 975340107,
             email: "intervencion@burgosma.es"
         },
-        image: "../../../public/images/el-burgo-de-osma.webp"     
+        image: "../../../public/el-burgo-de-osma.webp"     
        }, 
        {
         name: "Langa de Duero",
@@ -443,7 +443,7 @@ const villages = [
             phone: 975353001,
             email: "langadeduero@dipsoria.es"
         },
-        image: "../../../public/images/langa-de-duero.webp"     
+        image: "../../../public/langa-de-duero.webp"     
        }, 
        {
         name: "Arcos de Jalón",
@@ -456,7 +456,7 @@ const villages = [
             phone: 975320007,
             email: "ayuntamiento@arcosdejalon.es"
         },
-        image: "../../../public/images/arcos-de-jalon.webp"     
+        image: "../../../public/arcos-de-jalon.webp"     
        }, 
        {
         name: "Villar del Salz",
@@ -469,7 +469,7 @@ const villages = [
             phone: 978865925,
             email: "aytovillarsalz@aragob.es"
         },
-        image: "../../../public/images/villar-del-salz.webp"     
+        image: "../../../public/villar-del-salz.webp"     
        }, 
        {
         name: "Oliete",
@@ -482,7 +482,7 @@ const villages = [
             phone: 978818001,
             email: "aytoliete@gmail.com"
         },
-        image: "../../../public/images/oliete.webp"     
+        image: "../../../public/oliete.webp"     
        }, 
        {
         name: "Valoria la Buena",
@@ -495,7 +495,7 @@ const villages = [
             phone: 983502084,
             email: "ayuntamiento@valorialabuena.com"
         },
-        image: "../../../public/images/valoria-la-buena.webp"     
+        image: "../../../public/valoria-la-buena.webp"     
        }, 
        {
         name: "Rabanales de Aliste",
@@ -508,7 +508,7 @@ const villages = [
             phone: 980680282,
             email: "administracion@aytorabanales.es"
         },
-        image: "../../../public/images/rabanales-de-aliste.webp"     
+        image: "../../../public/rabanales-de-aliste.webp"     
        }, 
 ];
 
