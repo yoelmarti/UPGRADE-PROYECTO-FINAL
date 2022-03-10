@@ -10,7 +10,7 @@ const NavBar = () => {
   return (
     <nav className='flex flex-row justify-around'>
         <Link to='/'>Home</Link>
-        <Link to='/pueblos'>Pueblos</Link>
+        <Link to='villages'>Pueblos</Link>
         {user ? null :
           <Link to='/registro'>Registro</Link>
         }

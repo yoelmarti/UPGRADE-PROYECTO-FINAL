@@ -14,7 +14,7 @@ const routes = [
         element: <Home/>,
     },
     {
-        path: "/pueblos",
+        path: "/villages",
         element: <Villages/>
     },
     {

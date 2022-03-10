@@ -5,6 +5,7 @@ const userRouter = require('./app/api/routes/user.routes');
 const villageRouter = require('./app/api/routes/village.routes');
 const houseRouter = require('./app/api/routes/house.routes');
 const path = require('path');
+const cors = require('cors')
 const { connect } = require('./app/database/connect');
 connect();
 
@@ -18,9 +19,17 @@ server.use((req, res, next) => {
     next();
   });
 
+//cors
+  server.use(cors({
+      origin: ['http://localhost:4000','http://localhost:3000'],
+      credentials: true
+  }))
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
+
+//enrutado de iamgenes
+server.use('/public', express.static(path.join(__dirname, 'public')));
 
 //Enrutado
 server.use('/users', userRouter);
