@@ -1,4 +1,5 @@
 const express = require('express');
+const logger = require('morgan');
 //Importamos conexión a db y ejecutamos la conexión
 const { PORT } = require('./app/database/connect');
 const userRouter = require('./app/api/routes/user.routes');
@@ -27,6 +28,8 @@ server.use((req, res, next) => {
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
+
+server.use(logger('dev'));
 
 //enrutado de iamgenes
 server.use('/public', express.static(path.join(__dirname, 'public')));

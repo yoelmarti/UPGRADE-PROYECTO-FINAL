@@ -62,7 +62,6 @@ const addHouseToUser = async (req, res, next) => {
 }
 
 
-
 module.exports = {
     getAllHouses,
     getHouseById,
