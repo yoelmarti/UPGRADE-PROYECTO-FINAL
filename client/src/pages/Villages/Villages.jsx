@@ -1,4 +1,5 @@
 import React, {useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 // const INITIAL_STATE_VILLAGES = {
 //   "name": "",
@@ -70,12 +71,13 @@ const Villages = () => {
       </div>
       <div className='flex flex-wrap justify-center'>
          {villagesList.map((village)=>{return(
-          <div key={village._id} className="m-2 w-[200px] h-[300px] border-2 border-black rounded-md">
-            <p>{village.name}</p>
-            <img src={village.image} alt={village.name}/>
-            <p>{village.location.region}</p>
-            <p>{village.location.province}</p>
-          </div>
+              <div key={village._id} className="m-2 w-[200px] h-[300px] border-2 border-black rounded-md">
+                <p>{village.name}</p>
+                <Link to={`./${village._id}`}><img src={village.image} alt={village.name}/></Link>
+                <p>{village.location.region}</p>
+                <p>{village.location.province}</p>
+              </div>
+            
         )})}
       </div>
     </div>
