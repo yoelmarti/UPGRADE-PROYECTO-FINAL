@@ -73,11 +73,10 @@ const Villages = () => {
          {villagesList.map((village)=>{return(
               <div key={village._id} className="m-2 w-[200px] h-[300px] border-2 border-black rounded-md">
                 <p>{village.name}</p>
-                <Link to={`./${village._id}`}><img src={village.image} alt={village.name}/></Link>
+                <Link to={`./${village._id}`}><img src={`http://localhost:4000/public' ${village.image}`} alt={village.name}/></Link>
                 <p>{village.location.region}</p>
                 <p>{village.location.province}</p>
               </div>
-            
         )})}
       </div>
     </div>

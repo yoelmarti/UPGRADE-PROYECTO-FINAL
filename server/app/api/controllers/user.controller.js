@@ -100,7 +100,6 @@ const getUserProfile = async (req, res, next) => {
     }
 }
 
-
 const updateUserData = async (req, res, next) => {
     try {
         const userId = req.params.id;

@@ -3,7 +3,6 @@ const Village = require('../models/village.model');
 const dbConnection = require('../../database/connect');
 
 const villages = [
-
     {
      name: "Kuartango",
      location: {
@@ -86,7 +85,7 @@ const villages = [
             phone: 947308574,
             email: "merindaddecuestaurria@diputaciondeburgos.net"
         },
-        image: "../../../public/images/nofuentes.webp",   
+        image: "../../../public/nofuentes.webp",   
         houses: [ { _id: "622665dc112f8dcb25fab8c6" } ]
        }, 
        {
@@ -129,7 +128,7 @@ const villages = [
             phone: 947530701,
             email: "lasequeradehaza@diputaciondeburgos.net"
         },
-        image: "../../../public/la-sequera-de-haza.webp",
+        image: "../../../public/la_sequera_de_haza.webp",
         houses: [ { _id: "622665dc112f8dcb25fab8d0" }, { _id: "622665dc112f8dcb25fab8d1" } ]   
        }, 
        {
