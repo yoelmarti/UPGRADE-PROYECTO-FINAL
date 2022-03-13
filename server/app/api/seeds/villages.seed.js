@@ -4,6 +4,7 @@ const dbConnection = require('../../database/connect');
 
 const villages = [
     {
+     refv: 1, 
      name: "Kuartango",
      location: {
          region: "País Vasco",
@@ -18,6 +19,7 @@ const villages = [
     houses: [ { _id: "6224855f48bd96216ef47341" }, { _id: "6224855f48bd96216ef47342" }]    
     }, 
     {
+        refv: 2, 
         name: "Letur",
         location: {
             region: "Castilla-La Mancha",
@@ -32,6 +34,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8c1" }, { _id: "622665dc112f8dcb25fab8c2" },  { _id: "622665dc112f8dcb25fab8c3" }, { _id: "622665dc112f8dcb25fab918" }, { _id: "622665dc112f8dcb25fab919" } ]   
        }, 
        {
+        refv: 3, 
         name: "Elche de la Sierra",
         location: {
             region: "Castilla-La Mancha",
@@ -46,6 +49,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8c7" }, { _id: "622665dc112f8dcb25fab8c8" },  { _id: "622665dc112f8dcb25fab8c9" } ]    
        }, 
        {
+        refv: 4, 
         name: "Madrigal de las Altas Torres",
         location: {
             region: "Castilla y León",
@@ -60,6 +64,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8cc" }, { _id: "622665dc112f8dcb25fab915" }, { _id: "622665dc112f8dcb25fab916" },  { _id: "622665dc112f8dcb25fab917" } ]   
        }, 
        {
+        refv: 5, 
         name: "Caleruega",
         location: {
             region: "Castilla y León",
@@ -75,6 +80,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8c4" }, { _id: "622665dc112f8dcb25fab8c5" } ]
        }, 
        {
+        refv: 6, 
         name: "Nofuentes",
         location: {
             region: "Castilla y León",
@@ -89,6 +95,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8c6" } ]
        }, 
        {
+        refv: 7, 
         name: "Covarrubias",
         location: {
             region: "Castilla y León",
@@ -104,6 +111,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8ca" }, { _id: "622665dc112f8dcb25fab8cb" } ] 
        }, 
        {
+        refv: 8, 
         name: "Belorado",
         location: {
             region: "Castilla y León",
@@ -118,6 +126,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8cd" }, { _id: "622665dc112f8dcb25fab8ce" },  { _id: "622665dc112f8dcb25fab8cf" }, { _id: "622665dc112f8dcb25fab920" } ] 
        }, 
        {
+        refv: 9, 
         name: "La Sequera de Haza",
         location: {
             region: "Castilla y León",
@@ -132,6 +141,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8d0" }, { _id: "622665dc112f8dcb25fab8d1" } ]   
        }, 
        {
+        refv: 10, 
         name: "Gumiel de Izán",
         location: {
             region: "Castilla y León",
@@ -146,6 +156,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8d6" }, { _id: "622665dc112f8dcb25fab8d7" } ]
        }, 
        {
+        refv: 11, 
         name: "Huete",
         location: {
             region: "Castilla-La Mancha",
@@ -160,6 +171,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8d3" }, { _id: "622665dc112f8dcb25fab8d4" },  { _id: "622665dc112f8dcb25fab8d5" }, { _id: "622665dc112f8dcb25fab912" }, { _id: "622665dc112f8dcb25fab913" }  ]
        }, 
        {
+        refv: 12, 
         name: "Orea",
         location: {
             region: "Castilla-La Mancha",
@@ -174,6 +186,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8d9" }, { _id: "622665dc112f8dcb25fab8da" },  { _id: "622665dc112f8dcb25fab8db" } ]    
        }, 
        {
+        refv: 13, 
         name: "Sigüenza",
         location: {
             region: "Castilla-La Mancha",
@@ -188,6 +201,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8dc" }, { _id: "622665dc112f8dcb25fab8dd" }, { _id: "622665dc112f8dcb25fab91e" }, { _id: "622665dc112f8dcb25fab91f" } ]
        }, 
        {
+        refv: 14, 
         name: "Arbancón",
         location: {
             region: "Castilla-La Mancha",
@@ -202,6 +216,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8d2" } ]
        }, 
        {
+        refv: 15, 
         name: "Mandayona",
         location: {
             region: "Castilla-La Mancha",
@@ -216,6 +231,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8d8" } ]
        }, 
        {
+        refv: 16, 
         name: "Santa Ana la Real",
         location: {
             region: "Andalucía",
@@ -230,6 +246,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8df" }, { _id: "622665dc112f8dcb25fab8e0" },  { _id: "622665dc112f8dcb25fab8e1" } ]
        }, 
        {
+        refv: 17, 
         name: "San Vicente de La Sonsierra",
         location: {
             region: "La Rioja",
@@ -244,6 +261,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8de" } ]
        }, 
        {
+        refv: 18, 
         name: "Nalda",
         location: {
             region: "La Rioja",
@@ -259,6 +277,7 @@ const villages = [
 
        }, 
        {
+        refv: 19, 
         name: "Santa Colomba de Somoza",
         location: {
             region: "Castilla y León",
@@ -273,6 +292,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8e4" } ]
        }, 
        {
+        refv: 20, 
         name: "Fabero",
         location: {
             region: "Castilla y León",
@@ -287,6 +307,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8e5" }, { _id: "622665dc112f8dcb25fab8e6" },  { _id: "622665dc112f8dcb25fab8e7" }, { _id: "622665dc112f8dcb25fab90f" }, { _id: "622665dc112f8dcb25fab910" },  { _id: "622665dc112f8dcb25fab911" }  ]
        }, 
        {
+        refv: 21, 
         name: "Tolox",
         location: {
             region: "Andalucía",
@@ -301,6 +322,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8e8" }, { _id: "622665dc112f8dcb25fab8e9" } ]
        }, 
        {
+        refv: 22, 
         name: "Benarrabá",
         location: {
             region: "Andalucía",
@@ -315,6 +337,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8ea" } ]
        }, 
        {
+        refv: 23, 
         name: "Genalguacil",
         location: {
             region: "Andalucía",
@@ -329,6 +352,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8eb" }, { _id: "622665dc112f8dcb25fab8ec" },  { _id: "622665dc112f8dcb25fab8ed" } ]
        }, 
        {
+        refv: 24, 
         name: "Los Arcos",
         location: {
             region: "Comunidad Foral de Navarra",
@@ -343,6 +367,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8ee" }, { _id: "622665dc112f8dcb25fab8ef" } ]
        }, 
        {
+        refv: 25, 
         name: "Allo",
         location: {
             region: "Comunidad Foral de Navarra",
@@ -357,6 +382,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8f0" } ]
        }, 
        {
+        refv: 26, 
         name: "Orísoain",
         location: {
             region: "Comunidad Foral de Navarra",
@@ -371,6 +397,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8f1" }, { _id: "622665dc112f8dcb25fab8f2" },  { _id: "622665dc112f8dcb25fab8f3" }, { _id: "622665dc112f8dcb25fab921" }, { _id: "622665dc112f8dcb25fab922" },  { _id: "622665dc112f8dcb25fab923" } ]
        }, 
        {
+        refv: 27, 
         name: "Berbinzana",
         location: {
             region: "Comunidad Foral de Navarra",
@@ -385,6 +412,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8f4" }, { _id: "622665dc112f8dcb25fab8f5" } ]
        }, 
        {
+        refv: 28, 
         name: "Milagro",
         location: {
             region: "Comunidad Foral de Navarra",
@@ -399,6 +427,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8f6" } ]
        }, 
        {
+        refv: 29, 
         name: "Legarda",
         location: {
             region: "Comunidad Foral de Navarra",
@@ -413,6 +442,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8f7" }, { _id: "622665dc112f8dcb25fab8f8" },  { _id: "622665dc112f8dcb25fab8f9" } ]
        }, 
        {
+        refv: 30, 
         name: "Paredes de Nava",
         location: {
             region: "Castilla y León",
@@ -428,6 +458,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8fa" }, { _id: "622665dc112f8dcb25fab8fb" } ]
        }, 
        {
+        refv: 31, 
         name: "Aldea del Obispo",
         location: {
             region: "Castilla y León",
@@ -442,6 +473,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8fc" } ]
        }, 
        {
+        refv: 32, 
         name: "Sarnago",
         location: {
             region: "Castilla y León",
@@ -456,6 +488,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab8fd" }, { _id: "622665dc112f8dcb25fab8fe" },  { _id: "622665dc112f8dcb25fab8ff" } ]
        }, 
        {
+        refv: 33, 
         name: "El Burgo de Osma",
         location: {
             region: "Castilla y León",
@@ -470,6 +503,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab900" }, { _id: "622665dc112f8dcb25fab901" } ]
        }, 
        {
+        refv: 34, 
         name: "Langa de Duero",
         location: {
             region: "Castilla y León",
@@ -484,6 +518,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab902" } ]
        }, 
        {
+        refv: 35, 
         name: "Arcos de Jalón",
         location: {
             region: "Castilla y León",
@@ -498,6 +533,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab903" }, { _id: "622665dc112f8dcb25fab904" },  { _id: "622665dc112f8dcb25fab905" } ]
        }, 
        {
+        refv: 36, 
         name: "Villar del Salz",
         location: {
             region: "Aragón",
@@ -512,6 +548,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab906" }, { _id: "622665dc112f8dcb25fab907" }, { _id: "622665dc112f8dcb25fab914" }  ]
        }, 
        {
+        refv: 37, 
         name: "Oliete",
         location: {
             region: "Aragón",
@@ -526,6 +563,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab908" }, { _id: "622665dc112f8dcb25fab91a" }  ]
        }, 
        {
+        refv: 38, 
         name: "Valoria la Buena",
         location: {
             region: "Castilla y León",
@@ -540,6 +578,7 @@ const villages = [
         houses: [ { _id: "622665dc112f8dcb25fab909" }, { _id: "622665dc112f8dcb25fab90a" },  { _id: "622665dc112f8dcb25fab90b" }, { _id: "622665dc112f8dcb25fab90e" } ]
        }, 
        {
+        refv: 39, 
         name: "Rabanales de Aliste",
         location: {
             region: "Castilla y León",
@@ -553,7 +592,7 @@ const villages = [
 
         image: "../../../public/rabanales-de-aliste.webp",
         houses: [ { _id: "622665dc112f8dcb25fab90c" }, { _id: "622665dc112f8dcb25fab90d" }, { _id: "622665dc112f8dcb25fab924" }, { _id: "622665dc112f8dcb25fab91b" }, { _id: "622665dc112f8dcb25fab91c" },  { _id: "622665dc112f8dcb25fab91d" } ]
-       }, 
+       }
 ];
 
 const villagesDocuments = villages.map(village => new Village(village));
