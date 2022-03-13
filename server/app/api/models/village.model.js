@@ -5,6 +5,7 @@ const uniqueValidator = require('mongoose-unique-validator');
 
 let villageSchema = new Schema(
     {
+        refv: { type: Number},
         name: { type: String, required: true, unique: true },
         location: { 
                     region: { type: String, required: true },

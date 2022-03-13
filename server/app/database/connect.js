@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const mongoose = require('mongoose');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const MONGO_DB = process.env.MONGO_DB;
 const SECRET_SESSION = process.env.SECRET_SESSION;
 
