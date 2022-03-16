@@ -18,6 +18,8 @@ const VillageDetail = () => {
         setIsLoading(false)
       })
       
+      let houseImg = houses.map(house => house.image);
+
     } catch (error) {
       console.error(error)
     }
@@ -26,15 +28,27 @@ const VillageDetail = () => {
   if(isLoading){
     return (<>Loading...</>)
   }else{
+    
     return (
       <div>
         <p>{villageDetail.name}</p>
         <p>Provincia: {villageDetail.location.province}</p>
         <p>Comunidad: {villageDetail.location.region}</p>
         <p>Habitantes: {villageDetail.population}</p>
+        <>Casas: {villageDetail.houses}
+        
+        {villageDetail.houses.map((element) => {
+          return (
+          <div>
+            <p>{element.image}</p>
+          </div>
+        )})}</>
+
+        
         <Houses houses={houses}/>
       </div>
     )
+    
   }
 }
 

@@ -13,7 +13,7 @@ const getAllVillages = async (req, res, next ) => {
                 data: { villages: allVillages }
             })
         } else {
-            const allVillages = await Village.find();
+            const allVillages = await Village.find().populate('houses');
             return res.json({
                 status: 200,
                 message: httpStatusCode[200],
@@ -39,7 +39,34 @@ const getVillageById = async (req, res, next) => {
     }
 }
 
+const getHousesByVillage = async (req, res, next) => {
+    try {
+        const {id} = req. params;
+        if(req.query.page) {
+            const page = parseInt(req.query.page);
+            const skip = (page - 1) * 20;
+            const allHousesByVillage = await Village.find({_id: id}).skip(skip).limit(20).populate("houses");
+            return res.json({
+                status: 200,
+                message: httpStatusCode[200],
+                data: { data: allHousesByVillage },
+            });
+        }
+        else{
+            const allHousesByVillage = await Village.find({_id: id}).populate("houses");
+        return res.json({
+            status: 200,
+            message: httpStatusCode[200],
+            data: { data: allHousesByVillage },
+        });
+        }
+    } catch (error) {
+        
+    }
+}
+
 module.exports = {
     getAllVillages,
-    getVillageById
+    getVillageById,
+    getHousesByVillage
 }
