@@ -9,19 +9,19 @@ const INITIAL_STATE_LOGIN = {
 }
 
 const LogIn = () => {
-    const { loginUser } = useContext(UserContextLogin)
+    const { loginUser } = useContext(UserContextLogin);
     const { state } = useLocation();
     const [loginData, setLoginData] = useState(INITIAL_STATE_LOGIN);
 
 const submitForm = (ev) => {
     ev.preventDefault();
     loginUser(loginData, state ? state.prevRoute : null);
-    setLoginData(INITIAL_STATE_LOGIN)
+    setLoginData(INITIAL_STATE_LOGIN);
 };
 
 const handleInput = (ev) => {
     const {name, value} = ev.target;
-    setLoginData({...loginData, [name]: value})
+    setLoginData({...loginData, [name]: value});
     // console.log(loginData.email)
 };
     

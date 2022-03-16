@@ -32,6 +32,7 @@ const VillageDetail = () => {
         <p>Provincia: {villageDetail.location.province}</p>
         <p>Comunidad: {villageDetail.location.region}</p>
         <p>Habitantes: {villageDetail.population}</p>
+        <p>{villageDetail.houses[0].meters}</p>
         <Houses houses={houses}/>
       </div>
     )
