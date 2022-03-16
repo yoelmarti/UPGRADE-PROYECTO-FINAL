@@ -16,7 +16,7 @@ const villages = [
          email: "kuartango@kuartango.eus"
      },
     image: "../../../public/kuartango.webp",
-    houses: [ { _id: "6224855f48bd96216ef47341" }, { _id: "6224855f48bd96216ef47342" }]    
+    houses: [ ObjectId(6224855f48bd96216ef47341), ObjectId(6224855f48bd96216ef47342)]    
     }, 
     {
         refv: 2, 
