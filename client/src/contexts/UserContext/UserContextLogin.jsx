@@ -12,7 +12,7 @@ export const UserProvider = ({children}) => {
     
     const loginUser = async (loginData, prevRoute) => {
     try {
-        const request = await fetch('http://localhost:4000/users');
+        const request = await fetch('http://localhost:4000/users/login',);
         const response = await request.json();
 
         const existsUser = response.find(element => element.password === loginData.password && element.email === loginData.email);

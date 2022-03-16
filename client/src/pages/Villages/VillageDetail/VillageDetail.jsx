@@ -35,16 +35,6 @@ const VillageDetail = () => {
         <p>Provincia: {villageDetail.location.province}</p>
         <p>Comunidad: {villageDetail.location.region}</p>
         <p>Habitantes: {villageDetail.population}</p>
-        <>Casas: {villageDetail.houses}
-        
-        {villageDetail.houses.map((element) => {
-          return (
-          <div>
-            <p>{element.image}</p>
-          </div>
-        )})}</>
-
-        
         <Houses houses={houses}/>
       </div>
     )
