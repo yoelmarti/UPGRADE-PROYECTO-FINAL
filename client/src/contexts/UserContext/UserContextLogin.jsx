@@ -37,7 +37,7 @@ export const UserProvider = ({children}) => {
 
     
     if(token){
-        setUser(response.data.token);
+        setUser(response.data.user);
         // setToken(loginData)
         // localStorage.setItem('user', JSON.stringify(existsUser));
         navigate(prevRoute || '/');
@@ -53,6 +53,7 @@ export const UserProvider = ({children}) => {
     const logoutUser = () => {
         setUser(null);
         localStorage.removeItem('user');
+        localStorage.removeItem('token')
     };
 
     const userLoginState = {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 // import Houses from './Houses/Houses'
 const VillageDetail = () => {
   const { villageId } = useParams();
@@ -46,12 +46,24 @@ const VillageDetail = () => {
           <p>Provincia: {villageDetail.location.province}</p>
           <p>Comunidad: {villageDetail.location.region}</p>
           <p>Habitantes: {villageDetail.population}</p>
+          <p>{villageDetail.description}</p>
+          <Link to='https://kuartango.eus/' path='https://kuartango.eus/'>{villageDetail.web}</Link>
+          <div>
+            <p>Servicios</p>
+            {villageDetail.features.bar ? <p>bar</p> : null}
+            {villageDetail.features.farmacy ? <p>farmacy</p> : null}
+            {villageDetail.features.supermarket ? <p>supermarket</p> : null}
+            {villageDetail.features.doctor ? <p>doctor</p> : null}
+          </div>
         </div>
         
         {houseList.map((house)=>{return(
           <>
-            <img className="w-[200px] h-[200px]" src={`http://localhost:4000/public' ${house.image}`} alt={`casa ${house.refh}`}/>
-            <p>{house.meters}</p>
+            <div key={house.refh}>
+              <img className="w-[200px] h-[200px]" src={`http://localhost:4000/public' ${house.image}`} alt={`casa ${house.refh}`}/>
+              <p>{house.meters}</p>
+
+            </div>
           </>
           
         )
