@@ -5,6 +5,7 @@ const { PORT } = require('./app/database/connect');
 const userRouter = require('./app/api/routes/user.routes');
 const villageRouter = require('./app/api/routes/village.routes');
 const houseRouter = require('./app/api/routes/house.routes');
+const councilRouter = require('./app/api/routes/council.routes');
 const path = require('path');
 const cors = require('cors')
 const { connect } = require('./app/database/connect');
@@ -29,6 +30,8 @@ server.use((req, res, next) => {
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 
+server.set("secretKey", process.env.SECRET_SESSION); 
+
 server.use(logger('dev'));
 
 //enrutado de iamgenes
@@ -38,6 +41,7 @@ server.use('/public', express.static(path.join(__dirname, 'public')));
 server.use('/users', userRouter);
 server.use('/villages', villageRouter);
 server.use('/houses', houseRouter);
+server.use('/councils', councilRouter);
 
 
 //Manejador de errores

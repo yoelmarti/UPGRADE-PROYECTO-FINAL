@@ -7,8 +7,8 @@ const {
     addHouseToUser
 } = require('../controllers/house.controller');
 
-router.get('/', getAllHouses);
-router.get('/:id', getHouseById);
+router.get('/', [isAuth], getAllHouses);
+router.get('/:id', [isAuth], getHouseById);
 router.patch('/:id/add', [isAuth], addHouseToUser);
 
 module.exports = router;
