@@ -48,9 +48,11 @@ const loginUser = async (req, res, next) => {
                 }
             );
             res.status(200).json({
-                token: token,
+                
                 expiresIn: 3600000,
-                data: { user: userInfo}
+                data: { user: userInfo,
+                        token: token
+                        }
             })
         } else {
             return res.json({

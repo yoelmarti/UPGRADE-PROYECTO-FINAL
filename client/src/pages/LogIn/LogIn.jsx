@@ -22,7 +22,6 @@ const submitForm = (ev) => {
 const handleInput = (ev) => {
     const {name, value} = ev.target;
     setLoginData({...loginData, [name]: value});
-    // console.log(loginData.email)
 };
     
 return (

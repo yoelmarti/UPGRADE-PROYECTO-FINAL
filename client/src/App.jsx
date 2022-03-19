@@ -12,7 +12,6 @@ import { UserProvider } from "./contexts/UserContext/UserContextLogin";
 function App() {
   
   return (
-    <div>
       <UserProvider>
         <NavBar/>
         <Routes>
@@ -22,7 +21,6 @@ function App() {
         </Routes>
         <Footer/>
       </UserProvider>
-    </div>
   );
 }
 
