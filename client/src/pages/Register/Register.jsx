@@ -31,12 +31,12 @@ const Register = () => {
 
     const registerUser = async () => {
         try {
-            const request = await fetch('http://localhost:4000/users', {
+            const request = await fetch('http://localhost:4000/users/register', {
                 method: 'POST',
-                body: JSON.stringify(body),
                 headers: {
-                'Content-Type': 'application/json'
+                    'Content-Type': 'application/json'
                 },
+                body: JSON.stringify(body),
             });
             const response = await request.json();
     

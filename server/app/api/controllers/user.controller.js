@@ -44,12 +44,12 @@ const loginUser = async (req, res, next) => {
                 },
                 "longer-secret-is-better",
                 {
-                    expiresIn: 3600000,
+                    expiresIn: 10000,
                 }
             );
             res.status(200).json({
                 
-                expiresIn: 3600000,
+                expiresIn: 10000,
                 data: { user: userInfo,
                         token: token
                         }
