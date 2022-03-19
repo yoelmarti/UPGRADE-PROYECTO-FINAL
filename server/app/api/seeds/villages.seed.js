@@ -17,6 +17,7 @@ const villages = [
      },
     image: "../../../public/kuartango.webp",
     houses: [ "622e3523449db9f8ad8b52c0", "622e3523449db9f8ad8b52c1" ]    
+
     }, 
     {
         refv: 2, 
