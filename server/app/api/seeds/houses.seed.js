@@ -9,7 +9,7 @@ const houses = [
         rooms: 3,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa1.avif" 
     }, 
     {
         refh: 2, 
@@ -17,7 +17,7 @@ const houses = [
         rooms: 2,
         bathrooms: 1,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa2.avif" 
     },
     {
         refh: 3, 
@@ -25,7 +25,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa3.avif" 
     },
     {
         refh: 4, 
@@ -33,7 +33,7 @@ const houses = [
         rooms: 2,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa4.avif" 
     },
     {
         refh: 5, 
@@ -41,7 +41,7 @@ const houses = [
         rooms: 5,
         bathrooms: 4,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa5.avif" 
     },
     {
         refh: 6, 
@@ -49,7 +49,7 @@ const houses = [
         rooms: 6,
         bathrooms: 3,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa6.avif" 
     },
     {
         refh: 7, 
@@ -57,7 +57,7 @@ const houses = [
         rooms: 2,
         bathrooms: 1,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa7.avif" 
     },
     {
         refh: 8, 
@@ -65,7 +65,7 @@ const houses = [
         rooms: 2,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa8.avif" 
     },
     {
         refh: 9, 
@@ -73,7 +73,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa9.avif" 
     },
     {
         refh: 10, 
@@ -81,7 +81,7 @@ const houses = [
         rooms: 6,
         bathrooms: 4,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa10.avif" 
     },
     {
         refh: 11, 
@@ -89,7 +89,7 @@ const houses = [
         rooms: 3,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa11.avif" 
     }, 
     {
         refh: 12, 
@@ -97,7 +97,7 @@ const houses = [
         rooms: 2,
         bathrooms: 1,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa12.avif" 
     },
     {
         refh: 13, 
@@ -105,7 +105,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa13.avif" 
     },
     {
         refh: 14, 
@@ -113,7 +113,7 @@ const houses = [
         rooms: 2,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa14.avif" 
     },
     {
         refh: 15, 
@@ -121,7 +121,7 @@ const houses = [
         rooms: 5,
         bathrooms: 4,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa15.avif" 
     },
     {
         refh: 16, 
@@ -129,7 +129,7 @@ const houses = [
         rooms: 6,
         bathrooms: 3,
         availability: true,
-        image: "../../../public/casa.jpg"
+        image: "../../../public/casa16.avif"
     },
     {
         refh: 17, 
@@ -137,7 +137,7 @@ const houses = [
         rooms: 2,
         bathrooms: 1,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa17.avif" 
     },
     {
         refh: 18, 
@@ -145,7 +145,7 @@ const houses = [
         rooms: 2,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa18.avif" 
     },
     {
         refh: 19, 
@@ -153,7 +153,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa19.avif" 
     },
     {
         refh: 20, 
@@ -161,7 +161,7 @@ const houses = [
         rooms: 6,
         bathrooms: 4,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa20.avif" 
     },
     {
         refh: 21, 
@@ -169,7 +169,7 @@ const houses = [
         rooms: 3,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa21.avif" 
     }, 
     {
         refh: 22, 
@@ -177,7 +177,7 @@ const houses = [
         rooms: 2,
         bathrooms: 1,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa22.avif" 
     },
     {
         refh: 23, 
@@ -185,7 +185,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa23.avif" 
     },
     {
         refh: 24, 
@@ -193,7 +193,7 @@ const houses = [
         rooms: 2,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa24.avif" 
     },
     {
         refh: 25, 
@@ -201,7 +201,7 @@ const houses = [
         rooms: 5,
         bathrooms: 4,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa25.avif" 
     },
     {
         refh: 26, 
@@ -209,7 +209,7 @@ const houses = [
         rooms: 6,
         bathrooms: 3,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa26.avif" 
     },
     {
         refh: 27,
@@ -217,7 +217,7 @@ const houses = [
         rooms: 2,
         bathrooms: 1,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa27.avif" 
     },
     {
         refh: 28, 
@@ -225,7 +225,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa28.avif" 
     },
     {
         refh: 29, 
@@ -233,7 +233,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa29.avif" 
     },
     {
         refh: 30, 
@@ -241,7 +241,7 @@ const houses = [
         rooms: 6,
         bathrooms: 4,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa30.avif" 
     },
     {
         refh: 31, 
@@ -249,7 +249,7 @@ const houses = [
         rooms: 3,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa31.avif" 
     }, 
     {
         refh: 32, 
@@ -257,7 +257,7 @@ const houses = [
         rooms: 2,
         bathrooms: 1,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa32.avif" 
     },
     {
         refh: 33, 
@@ -265,7 +265,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa33.avif" 
     },
     {
         refh: 34, 
@@ -273,7 +273,7 @@ const houses = [
         rooms: 2,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa34.avif" 
     },
     {
         refh: 35, 
@@ -281,7 +281,7 @@ const houses = [
         rooms: 5,
         bathrooms: 4,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa35.avif" 
     },
     {
         refh: 36, 
@@ -289,7 +289,7 @@ const houses = [
         rooms: 7,
         bathrooms: 4,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa36.avif" 
     },
     {
         refh: 37, 
@@ -297,7 +297,7 @@ const houses = [
         rooms: 2,
         bathrooms: 1,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa37.avif" 
     },
     {
         refh: 38, 
@@ -305,7 +305,7 @@ const houses = [
         rooms: 2,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg"
+        image: "../../../public/casa38.avif"
     },
     {
         refh: 39, 
@@ -313,7 +313,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa39.avif" 
     },
     {
         refh: 40, 
@@ -321,7 +321,7 @@ const houses = [
         rooms: 6,
         bathrooms: 4,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa40.avif" 
     },
     {
         refh: 41, 
@@ -329,7 +329,7 @@ const houses = [
         rooms: 3,
         bathrooms: 2,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa41.avif" 
     }, 
     {
         refh: 42, 
@@ -337,7 +337,7 @@ const houses = [
         rooms: 2,
         bathrooms: 1,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa42.avif" 
     },
     {
         refh: 43, 
@@ -345,7 +345,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa43.avif" 
     },
     {
         refh: 44, 
@@ -353,7 +353,7 @@ const houses = [
         rooms: 2,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa44.avif" 
     },
     {
         refh: 45, 
@@ -361,7 +361,7 @@ const houses = [
         rooms: 5,
         bathrooms: 4,
         availability: false,
-        image: "../../../public/casa.jpg"
+        image: "../../../public/casa45.avif"
     },
     {
         refh: 46, 
@@ -369,7 +369,7 @@ const houses = [
         rooms: 6,
         bathrooms: 3,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa46.avif" 
     },
     {
         refh: 47, 
@@ -377,7 +377,7 @@ const houses = [
         rooms: 2,
         bathrooms: 1,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa47.avif" 
     },
     {
         refh: 48, 
@@ -385,7 +385,7 @@ const houses = [
         rooms: 2,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa48.avif" 
     },
     {
         refh: 49, 
@@ -393,7 +393,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa49.avif" 
     },
     {
         refh: 50, 
@@ -401,7 +401,7 @@ const houses = [
         rooms: 2,
         bathrooms: 3,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa50.avif" 
     },
     {
         refh: 51,
@@ -409,7 +409,7 @@ const houses = [
         rooms: 3,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa51.avif" 
     }, 
     {
         refh: 52, 
@@ -417,7 +417,7 @@ const houses = [
         rooms: 2,
         bathrooms: 1,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa52.avif" 
     },
     {
         refh: 53, 
@@ -425,7 +425,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa53.avif" 
     },
     {
         refh: 54, 
@@ -433,7 +433,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa54.avif" 
     },
     {
         refh: 55, 
@@ -441,7 +441,7 @@ const houses = [
         rooms: 5,
         bathrooms: 4,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa55.avif" 
     },
     {
         refh: 56, 
@@ -449,7 +449,7 @@ const houses = [
         rooms: 6,
         bathrooms: 3,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa56.avif" 
     },
     {
         refh: 57, 
@@ -457,7 +457,7 @@ const houses = [
         rooms: 2,
         bathrooms: 1,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa57.avif" 
     },
     {
         refh: 58, 
@@ -465,7 +465,7 @@ const houses = [
         rooms: 4,
         bathrooms: 3,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa58.avif" 
     },
     {
         refh: 59, 
@@ -473,7 +473,7 @@ const houses = [
         rooms: 4,
         bathrooms: 2,
         availability: false,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa59.avif" 
     },
     {
         refh: 60, 
@@ -481,7 +481,7 @@ const houses = [
         rooms: 6,
         bathrooms: 4,
         availability: true,
-        image: "../../../public/casa.jpg" 
+        image: "../../../public/casa60.avif" 
     },
     {
         refh: 61, 

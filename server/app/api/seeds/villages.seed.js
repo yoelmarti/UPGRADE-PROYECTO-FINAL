@@ -16,7 +16,7 @@ const villages = [
          email: "kuartango@kuartango.eus"
      },
     image: "../../../public/kuartango.webp",
-    houses: [ "622e3523449db9f8ad8b52c0", "622e3523449db9f8ad8b52c1" ]    
+    houses: ["6235aff3123202cbbb5b534d", "6235aff3123202cbbb5b5365" ]    
 
     }, 
     {
@@ -31,9 +31,8 @@ const villages = [
             phone: 967426222,
             email: "letur@dipualba.es"
         },
-        image: "../../../public/letur.webp",
-        // houses: [ "  ", "  ", "  ", " " , " " ]   
-        houses: [ "622e3523449db9f8ad8b52c0", "622e3523449db9f8ad8b52c1" ] 
+        image: "../../../public/letur.webp", 
+        houses: ["6235aff3123202cbbb5b5353"] 
        }, 
        {
         refv: 3, 
@@ -48,8 +47,7 @@ const villages = [
             email: "helikejoven@gmail.com"
         },
         image: "../../../public/elche-de-la-sierra.webp",
-        // houses: [ "", "","" ]    
-        houses: [ "622e3523449db9f8ad8b52c0", "622e3523449db9f8ad8b52c1" ] 
+        houses: [ "6235aff3123202cbbb5b5349" ] 
        }, 
        {
         refv: 4, 
@@ -64,7 +62,7 @@ const villages = [
             email: "ayuntamiento@madrigaldelasaltastorres.es"
         },
         image: "../../../public/madrigal-de-las-altas-torres.webp",
-        // houses: ["","","","" ]   
+        houses: ["6235aff3123202cbbb5b5348"]   
        }, 
        {
         refv: 5, 
@@ -80,7 +78,7 @@ const villages = [
         },
 
         image: "../../../public/caleruega.webp",
-        // houses: [ "", "" ]
+        houses: [ "6235aff3123202cbbb5b5343" ]
        }, 
        {
         refv: 6, 
@@ -95,7 +93,7 @@ const villages = [
             email: "merindaddecuestaurria@diputaciondeburgos.net"
         },
         image: "../../../public/nofuentes.webp",   
-        // houses: [ "" ]
+        houses: [ "6235aff3123202cbbb5b5344" ]
        }, 
        {
         refv: 7, 
@@ -111,7 +109,7 @@ const villages = [
         },
 
         image: "../../../public/covarrubias.webp",
-        // houses: [ "", "" ] 
+        houses: [ "6235aff3123202cbbb5b535f"] 
        }, 
        {
         refv: 8, 
@@ -126,7 +124,7 @@ const villages = [
             email: "info@belorado.org"
         },
         image: "../../../public/belorado.webp",
-        // houses: [ "", "","","" ] 
+        houses: [ "6235aff3123202cbbb5b5367" ] 
        }, 
        {
         refv: 9, 
@@ -141,7 +139,7 @@ const villages = [
             email: "lasequeradehaza@diputaciondeburgos.net"
         },
         image: "../../../public/la_sequera_de_haza.webp",
-        // houses: [ "","" ]   
+        houses: [ "6235aff3123202cbbb5b5373" ]   
        }, 
        {
         refv: 10, 
@@ -156,7 +154,7 @@ const villages = [
             email: "gumieldeizan@diputaciondeburgos.net"
         },
         image: "../../../public/gumiel-de-izan.webp",
-        // houses: [ "","" ]
+        houses: [ "6235aff3123202cbbb5b5372" ]
        }, 
        {
         refv: 11, 
@@ -171,7 +169,7 @@ const villages = [
             email: "huetesecretario@hotmail.com"
         },
         image: "../../../public/huete.webp",
-        // houses: [ "", "", "", "", ""]
+        houses: [ "6235aff3123202cbbb5b536c", "6235aff3123202cbbb5b5369", "6235aff3123202cbbb5b534f"]
        }, 
        {
         refv: 12, 
@@ -186,7 +184,7 @@ const villages = [
             email: "ayto-orea@ayto-orea.com"
         },
         image: "../../../public/orea.webp",
-        // houses: ["", "", "" ]    
+        houses: ["6235aff3123202cbbb5b5352" ]    
        }, 
        {
         refv: 13, 
@@ -201,7 +199,7 @@ const villages = [
             email: "ayuntamiento@siguenza.es"
         },
         image: "../../../public/siguenza.webp",
-        // houses: [ "" , "", "", "" ]
+        houses: [ "6235aff3123202cbbb5b5375" ]
        }, 
        {
         refv: 14, 
@@ -216,7 +214,7 @@ const villages = [
             email: "ayuntamientodearbancon@hotmail.es"
         },
         image: "../../../public/arbancon.webp",
-        // houses: [ "" ]
+        houses: [ "6235aff3123202cbbb5b536f" ]
        }, 
        {
         refv: 15, 
@@ -231,7 +229,7 @@ const villages = [
             email: "felipec@espublico.com"
         },
         image: "../../../public/mandayona.webp",
-        // houses: [ ""  ]
+        houses: [ "6235aff3123202cbbb5b536e"  ]
        }, 
        {
         refv: 16, 
@@ -246,7 +244,7 @@ const villages = [
             email: "administracion@santaanalareal.es"
         },
         image: "../../../public/santa-ana-la-real.webp",
-        // houses: [ "", "", "" ]
+        houses: [ "6235aff3123202cbbb5b5368"]
        }, 
        {
         refv: 17, 
@@ -261,7 +259,7 @@ const villages = [
             email: "ayto@sanvicentedelasonsierra.org"
         },
         image: "../../../public/san-vicente-de-la-sonsierra.webp",
-        // houses: [ "" ]
+        houses: [ "6235aff3123202cbbb5b5346", "6235aff3123202cbbb5b534c" ]
        }, 
        {
         refv: 18, 
@@ -276,7 +274,7 @@ const villages = [
             email: "ayto@aytonalda.org "
         },
         image: "../../../public/nalda.webp",
-        // houses: [ "", "" ]        
+        houses: [ "6235aff3123202cbbb5b534b" ]        
 
        }, 
        {
@@ -292,7 +290,7 @@ const villages = [
             email: "aytostacolomba@live.com"
         },
         image: "../../../public/santa-colomba-de-somoza.webp",
-        // houses: [ "" ]
+        houses: [ "6235aff3123202cbbb5b533f" ]
        }, 
        {
         refv: 20, 
@@ -307,7 +305,7 @@ const villages = [
             email: "consultas@fabero.org"
         },
         image: "../../../public/fabero.webp",
-        // houses: [ "", "", "", "", "", "" ]
+        houses: [ "6235aff3123202cbbb5b535b" ]
        }, 
        {
         refv: 21, 
@@ -322,7 +320,7 @@ const villages = [
             email: "ayuntamiento@tolox.es"
         },
         image: "../../../public/tolox.webp",
-        // houses: ["", "" ]
+        houses: ["6235aff3123202cbbb5b5340" ]
        }, 
        {
         refv: 22, 
@@ -337,7 +335,7 @@ const villages = [
             email: "info@benarraba.es"
         },
         image: "../../../public/benarraba.webp",
-        // houses: [ "" ]
+        houses: [ "6235aff3123202cbbb5b5363" ]
        }, 
        {
         refv: 23, 
@@ -352,7 +350,7 @@ const villages = [
             email: "genalguacil@sopde.es"
         },
         image: "../../../public/genalguacil.webp",
-        // houses: [ "", "", "" ]
+        houses: [ "6235aff3123202cbbb5b5347" ]
        }, 
        {
         refv: 24, 
@@ -367,7 +365,7 @@ const villages = [
             email: "cp.losarc@pnte.cfnavarra.es"
         },
         image: "../../../public/los-arcos.webp",
-        // houses: [ "", "" ]
+        houses: [ "6235aff3123202cbbb5b5341" ]
        }, 
        {
         refv: 25, 
@@ -382,7 +380,7 @@ const villages = [
             email: "info@villadeallo.org"
         },
         image: "../../../public/allo.webp",
-        // houses: ["" ]
+        houses: ["6235aff3123202cbbb5b5342", "6235aff3123202cbbb5b5364" ]
        }, 
        {
         refv: 26, 
@@ -397,7 +395,7 @@ const villages = [
             email: "orisoain@animsa.es",
         },
         image: "../../../public/orisoain.webp",
-        // houses: ["", "" , "", "", "", "" ]
+        houses: ["6235aff3123202cbbb5b5374"]
        }, 
        {
         refv: 27, 
@@ -412,7 +410,7 @@ const villages = [
             email: "orvetafalla@gmail.com"
         },
         image: "../../../public/berbinzana.webp",
-        // houses: ["", "" ]
+        houses: ["6235aff3123202cbbb5b5360" ]
        }, 
        {
         refv: 28, 
@@ -427,7 +425,7 @@ const villages = [
             email: "ayuntamiento@milagro.es"
         },
         image: "../../../public/milagro.webp",
-        // houses: [ "" ]
+        houses: [ "6235aff3123202cbbb5b5350" ]
        }, 
        {
         refv: 29, 
@@ -442,7 +440,7 @@ const villages = [
             email: "legarda@animsa.es"
         },
         image: "../../../public/legarda.webp",
-        // houses: ["", "" , "" ]
+        houses: ["6235aff3123202cbbb5b5377", "6235aff3123202cbbb5b5378" ]
        }, 
        {
         refv: 30, 
@@ -458,7 +456,7 @@ const villages = [
         },
 
         image: "../../../public/paredes-de-nava.webp",
-        // houses: [ "", "" ]
+        houses: [ "6235aff3123202cbbb5b5359" ]
        }, 
        {
         refv: 31, 
@@ -473,7 +471,7 @@ const villages = [
             email: "ayto_aldeadelobispo@yahoo.es"
         },
         image: "../../../public/aldea-del-obispo.webp",
-        // houses: ["" ]
+        houses: ["6235aff3123202cbbb5b535a", "6235aff3123202cbbb5b5345", "6235aff3123202cbbb5b535c" ]
        }, 
        {
         refv: 32, 
@@ -488,7 +486,7 @@ const villages = [
             email: "sarnago@sarnago.com"
         },
         image: "../../../public/arbancon.webp",
-        // houses: [ "", "", "" ]
+        houses: [ "6235aff3123202cbbb5b5357", "6235aff3123202cbbb5b533d", "6235aff3123202cbbb5b5351" ]
        }, 
        {
         refv: 33, 
@@ -503,7 +501,7 @@ const villages = [
             email: "intervencion@burgosma.es"
         },
         image: "../../../public/el-burgo-de-osma.webp",
-        // houses: ["", "" ]
+        houses: ["6235aff3123202cbbb5b5361", "6235aff3123202cbbb5b533e" ]
        }, 
        {
         refv: 34, 
@@ -518,7 +516,7 @@ const villages = [
             email: "langadeduero@dipsoria.es"
         },
         image: "../../../public/langa-de-duero.webp",
-        // houses: [ "" ]
+        houses: [ "6235aff3123202cbbb5b536b", "6235aff3123202cbbb5b5371","6235aff3123202cbbb5b5354", "6235aff3123202cbbb5b5356" ]
        }, 
        {
         refv: 35, 
@@ -533,7 +531,7 @@ const villages = [
             email: "ayuntamiento@arcosdejalon.es"
         },
         image: "../../../public/arcos-de-jalon.webp",
-        // houses: [ "", "", "" ]
+        houses: [ "6235aff3123202cbbb5b534a" ]
        }, 
        {
         refv: 36, 
@@ -548,7 +546,7 @@ const villages = [
             email: "aytovillarsalz@aragob.es"
         },
         image: "../../../public/villar-del-salz.webp",
-        // houses: ["", "","" ]
+        houses: ["6235aff3123202cbbb5b5358", "6235aff3123202cbbb5b535d", "6235aff3123202cbbb5b535e", "6235aff3123202cbbb5b5355" ]
        }, 
        {
         refv: 37, 
@@ -563,7 +561,7 @@ const villages = [
             email: "aytoliete@gmail.com"
         },
         image: "../../../public/oliete.webp",
-        // houses: [ "", "" ]
+        houses: [ "6235aff3123202cbbb5b536a", "6235aff3123202cbbb5b5370", "6235aff3123202cbbb5b5376", "6235aff3123202cbbb5b5362" ]
        }, 
        {
         refv: 38, 
@@ -578,7 +576,7 @@ const villages = [
             email: "ayuntamiento@valorialabuena.com"
         },
         image: "../../../public/valoria-la-buena.webp",
-        // houses: [ "", "","","" ]
+        houses: [ "6235aff3123202cbbb5b534e", "6235aff3123202cbbb5b5366" ]
        }, 
        {
         refv: 39, 
@@ -594,7 +592,7 @@ const villages = [
         },
 
         image: "../../../public/rabanales-de-aliste.webp",
-        // houses: ["","","","","","" ]
+        houses: ["6235aff3123202cbbb5b536d" ]
        }
 ];
 
