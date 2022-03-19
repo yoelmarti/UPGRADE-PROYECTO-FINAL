@@ -16,16 +16,23 @@ const {
 router.post('/register', [
     check('name')
         .not()
+        .isAlpha()
         .isEmpty()
         .isLength({ min: 3 })
         .withMessage('Name must be at least 3 characters long'),
     check('email', 'Email is required')
+        .isEmail()
         .not()
         .isEmpty(),
     check('password', 'Password should be between 8 to 20 characters long')
         .not()
         .isEmpty()
         .isLength({ min: 8, max: 20 })
+        //Minimum eight characters, at least one letter, one number and one special character
+        .matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)
+        .withMessage('Password must have minimum eight characters, at least one letter, one number and one special character'),        
+    check('children')
+        .isNumeric()
 ],
 registerUser);
 
