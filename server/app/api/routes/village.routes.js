@@ -9,7 +9,7 @@ const {
 
 router.get('/', getAllVillages);
 router.get('/:id', getVillageById);
-router.get('/:id/houses', getHousesByVillage);
+router.get('/:id/houses', [isAuth], getHousesByVillage);
 
 
 module.exports = router;

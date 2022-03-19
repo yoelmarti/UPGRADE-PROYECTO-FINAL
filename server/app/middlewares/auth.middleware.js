@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const httpStatusCode = require('../utils/httpStatusCode');
 
+
 const isAuth = (req, res, next) => {
     const authorization = req.headers.authorization;
     if (!authorization){
