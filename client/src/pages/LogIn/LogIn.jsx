@@ -26,18 +26,37 @@ const handleInput = (ev) => {
 };
     
 return (
-    <div className='flex flex-col w-[400px] m-auto text-center bg-slate-200 rounded-md'>
-        <div className='flex flex-col'>
-            <p className='text-2xl'>Iniciar sesión</p>
-            <form className='flex flex-col' onSubmit={submitForm}> 
-                <label>Correo Electrónico</label>
-                <input type='text' name='email' value={loginData.email} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black'></input>
-                <label>Contraseña</label>
-                <input type='password' name='password' value={loginData.password} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black'></input>
-                <p>¿Has olvidado tu contrseña?</p>
-                <button type="submit">Iniciar sesión</button>
-                <p>¿Aun no estas registrado? <Link to='/registro'>Crea tu cuenta</Link></p>
-            </form>
+    <div className='min-h-screen flex items-stretch text-white'>
+        <div className="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center bg-[url('https://images.unsplash.com/photo-1619299840914-4b85315e8a3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=672&q=80')]">
+            <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
+            <div className="w-full px-24 z-10">
+                
+                <p className="text-5xl font-medium text-left tracking-wide">Encuentra tu pueblo ideal y empieza a vivir.</p>
+            </div>
+        
+        </div>
+        <div className="lg:w-1/2 w-full flex items-center justify-center text-center md:px-16 px-0 z-0">
+            <div className="absolute lg:hidden z-10 inset-0 bg-gray-500 bg-no-repeat bg-cover items-center bg-[url('https://images.unsplash.com/photo-1577495508048-b635879837f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80')]">
+                <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
+            </div>
+            
+            <div className='w-full py-6 z-20'>
+                <form className='sm:w-2/3 w-full px-4 lg:px-0 mx-auto' onSubmit={submitForm}> 
+                    <div className='pb-2 pt-4'>
+                        <input type='text' name='email' placeholder='Email' value={loginData.email} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                    </div>
+                    <div className='pb-2 pt-4'>
+                        <input type='password' name='password' placeholder='Contraseña' value={loginData.password} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                    </div>
+                    <div className='text-right lg:text-black hover:underline hover:text-[#CC998D]'>
+                        <p>¿Has olvidado tu contrseña?</p>
+                    </div>
+                    <div className='px-4 pb-2 pt-4'>
+                        <button type="submit" className='uppercase block w-full p-4 text-lg rounded-full bg-[#744253] hover:bg-[#CC998D] focus:outline-none'>Iniciar sesión</button>
+                    </div>
+                    <p className='lg:text-black'>¿Aun no estas registrado? <Link to='/registro' className='hover:text-[#CC998D]'>Crea tu cuenta</Link></p>
+                </form>
+            </div>
         </div>
     </div>
 )

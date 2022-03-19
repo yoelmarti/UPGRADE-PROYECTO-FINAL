@@ -10,7 +10,6 @@ const INITIAL_STATE_REGISTER = {
     profession:'',
     children:'',
     avatar: '',
-
 }
 
 const Register = () => {
@@ -56,55 +55,61 @@ const Register = () => {
     };
 
     return (
-    <div>
-        <div className='flex flex-col w-[400px] m-auto text-center bg-slate-200 rounded-md'>
-            <p className='text-2xl'>Formulario de Registro</p>
-            <p>Para ver los pueblos que buscan familia y tienen casa disponibles debes estar registrado</p>
+        <div className='min-h-screen flex items-stretch text-white'>
+        <div className="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center bg-[url('https://images.unsplash.com/photo-1620581261303-e905d1dbe0eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')]">
+            <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
+            <div className="w-full px-24 z-10">
+                
+                <p className="text-4xl font-medium text-left tracking-wide">Descubre lo bueno que es vivir en el corazón de un pueblo.</p>
+            </div>
+        
+        </div>
+        <div className="lg:w-1/2 w-full flex items-center justify-center text-center md:px-16 px-0 z-0">
+            <div className="absolute lg:hidden z-10 inset-0 bg-gray-500 bg-no-repeat bg-cover items-center bg-[url('https://images.unsplash.com/photo-1577495508048-b635879837f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80')]">
+                <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
+            </div>
             
-            <form className='flex flex-col w-[400px]' onSubmit={submitForm}>
-                <label>
-                    <p>Nombre</p>
-                    <input type='text' name='name' value={registerFormData.name} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black' ></input>
-                </label>
+            <div className='w-full py-6 z-20'>
+                <form className='sm:w-2/3 w-full px-4 lg:px-0 mx-auto' onSubmit={submitForm}>
+                    <div className='pb-2 pt-4'>
+                        
+                        <input type='text' name='name' placeholder='Nombre' value={registerFormData.name} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black' ></input>
+                    </div>
 
-                <label>
-                    <p>Correo Electrónico</p>
-                    <input type='text' name='email' value={registerFormData.email} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black'></input>
-                </label>
+                    <div className='pb-2 pt-4'>
+                        <input type='text' name='email' placeholder='Email' value={registerFormData.email} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                    </div>
 
-                <label>
-                    <p>Contraseña</p>
-                    <input type='password' name='password' value={registerFormData.password} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black'></input>
-                </label>
+                    <div className='pb-2 pt-4'>
+                        <input type='password' name='password' placeholder='Contraseña' value={registerFormData.password} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                    </div>
 
-                <label>
-                    <p>Fecha de Nacimiento</p>
-                    <input type='date' name='birthdate' value={registerFormData.birthdate} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black'></input>
-                </label>
+                    <div className='pb-2 pt-4'>
+                        <input type='date' name='birthdate'  placeholder='MM/DD/YYYY' value={registerFormData.birthdate} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                    </div>
 
-                <label>
-                    <p>Profesión</p>
-                    <input type='text' name='profession' value={registerFormData.profession} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black'></input>
-                </label>
+                    <div className='pb-2 pt-4'>
+                        <input type='text' name='profession' placeholder='Profesión' value={registerFormData.profession} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                    </div>
 
-                <label>
-                    <p>Hijos</p>
-                    <input type='text' name='children' value={registerFormData.children} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black'></input>
-                </label>
+                    <div className='pb-2 pt-4'>
+                        <input type='text' name='children' placeholder='Hijos' value={registerFormData.children} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                    </div>
 
-                <label>
-                    <p>Foto de Perfil</p>
-                    <input placeholder='debes introducir url' type='text' name='avatar' value={registerFormData.avatar} onChange={handleInput} className='w-[300px] border-2 rounded-md border-black' ></input>
-                </label>
+                    <div className='pb-2 pt-4'>
+                        <input placeholder='URL de tu foto de perfil' type='text' name='avatar' value={registerFormData.avatar} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black' ></input>
+                    </div>
 
-                <label>
-                    <input type='checkbox'></input>
-                    <span>Acepto la política de privacidad y el Aviso Legal</span>
-                </label>
-                <button type='submit'>Registrarme ahora</button>
-
-                <span>¿Ya estas registrado?<Link to='/iniciar-sesion'>Inicia sesión</Link></span>
-            </form>
+                    <div className='pb-2 pt-4'>
+                        <input type='checkbox' className='accent-[#744253]'></input>
+                        <span className='text-black'>Acepto la política de privacidad y el Aviso Legal</span>
+                    </div>
+                    <div className='px-4 pb-2 pt-4'>
+                        <button type='submit' className='uppercase block w-full p-4 text-lg rounded-full bg-[#744253] hover:bg-[#CC998D] focus:outline-none '>Registrarme</button>
+                    </div>
+                    <p className='text-black'>¿Ya estas registrado? <Link to='/iniciar-sesion' className='hover:text-[#CC998D]'>Inicia sesión</Link></p>
+                </form>
+            </div>
         </div>
     </div>
   )
