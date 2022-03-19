@@ -15,6 +15,7 @@ const registerUser = async (req, res, next) => {
         newUser.children = req.body.children;
         newUser.birthDate = req.body.birthDate;
         newUser.profession = req.body.profession;
+        newUser.role = "user";
         const userDb = await newUser.save();
         res.json({
             status: 201,
@@ -41,8 +42,9 @@ const loginUser = async (req, res, next) => {
                 {
                     id: userInfo._id,
                     email: userInfo.email,  
+                    role: userInfo.role
                 },
-                "longer-secret-is-better",
+                req.app.get("secretKey"),
                 {
                     expiresIn: 10000,
                 }
@@ -94,6 +96,7 @@ const getUserProfile = async (req, res, next) => {
                 children: user.children,
                 birthdate: user.birthDate,
                 profession: user.profession,
+                role: user.role,
                 houses: user.houses,
             }
         })
