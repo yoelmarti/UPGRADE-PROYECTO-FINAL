@@ -19,7 +19,15 @@ let villageSchema = new Schema(
                 email: { type: String }
         },
         image: {type: String},
-        houses: [ { type: mongoose.Types.ObjectId, ref: 'houses' }],
+        description: { type: String},
+        web: { type: String},
+        features: {
+            bar: { type: Boolean},
+            farmacy: { type: Boolean},
+            supermarket: { type: Boolean},
+            doctor: { type: Boolean},
+        },
+        houses: [ { type: mongoose.Types.ObjectId, ref: 'houses' }]
     }, 
     {
         timestamps: true,
