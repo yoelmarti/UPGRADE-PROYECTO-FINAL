@@ -32,7 +32,7 @@ const getVillageById = async (req, res, next) => {
         return res.json({
             status: 200,
             message: httpStatusCode[200],
-            data: {village: villageById}
+            data: { village: villageById }
         })
     } catch (error) {
         return next(error);
