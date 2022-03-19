@@ -49,7 +49,7 @@ const getHousesByVillage = async (req, res, next) => {
             return res.json({
                 status: 200,
                 message: httpStatusCode[200],
-                data: { data: allHousesByVillage },
+                data: { info: allHousesByVillage },
             });
         }
         else{
@@ -57,7 +57,7 @@ const getHousesByVillage = async (req, res, next) => {
         return res.json({
             status: 200,
             message: httpStatusCode[200],
-            data: { data: allHousesByVillage },
+            data: { info: allHousesByVillage },
         });
         }
     } catch (error) {
