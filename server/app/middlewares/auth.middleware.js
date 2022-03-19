@@ -1,10 +1,12 @@
 const jwt = require('jsonwebtoken');
 const httpStatusCode = require('../utils/httpStatusCode');
+const User = require('../api/models/user.model');
+// const Council = require('../api/models/council.model');
 
 
 const isAuth = (req, res, next) => {
     const authorization = req.headers.authorization;
-    if (!authorization){
+    if (!authorization) {
         return res.json({
             status: 401,
             message: httpStatusCode[401],
@@ -12,7 +14,7 @@ const isAuth = (req, res, next) => {
         })
     }
     const splits = authorization.split(" ");
-    if (splits.length !=2 || splits[0] != "Bearer"){
+    if (splits.length != 2 || splits[0] != "Bearer") {
         return res.json({
             status: 400,
             message: httpStatusCode[400],
@@ -21,7 +23,7 @@ const isAuth = (req, res, next) => {
     }
     const jwtString = splits[1];
     try {
-        const token = jwt.verify(jwtString, "longer-secret-is-better");
+        const token = jwt.verify(jwtString, req.app.get("secretKey"));
         const authority = {
             id: token.id,
             // name: token.name
@@ -30,25 +32,36 @@ const isAuth = (req, res, next) => {
     } catch (error) {
         return next(error)
     }
-   
-    next();
 
-    // try {
-    //     const token = req.headers.authorization.split(" ")[1];
-    //     jwt.verify(token, "longer-secret-is-better");
-    //     const authority = {
-    //         id: token.id,
-    //         name: token.name
-    //     };
-    //     req.authority = authority;
-      
-    // } catch (error) {
-    //     res.status(401).json({ message: "No token provided" });
-    // }
-    // next();
+    next();
+}
+
+const authRole = (roles) => async (req, res, next) => {
+    try {
+        const token = req.headers.authorization.split(' ').pop();
+        const tokenData = jwt.verify(token, process.env.SECRET_SESSION);
+        const userData = await User.findById(tokenData.id);
+        // const councilData = await Council.findById(tokenData.id);
+        // console.log(tokenData);
+        if (roles.includes(userData.role)) {
+            next();
+        // } else if(roles.includes(councilData.role)){
+            
+
+        }else {
+            res.json({
+                status: 409,
+                message: "No tienes permisos para acceder aquí"
+            })
+        }
+    } catch (error) {
+        res.status(409)
+        next(error);
+    }
 }
 
 
 module.exports = {
-    isAuth
+    isAuth,
+    authRole
 }

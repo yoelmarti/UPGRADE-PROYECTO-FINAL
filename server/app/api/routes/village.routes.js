@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { isAuth } = require('../../middlewares/auth.middleware');
+const { isAuth, authRole } = require('../../middlewares/auth.middleware');
 const {
     getAllVillages, 
     getVillageById,
@@ -8,8 +8,8 @@ const {
 } = require('../controllers/village.controller');
 
 router.get('/', getAllVillages);
-router.get('/:id', getVillageById);
+router.get('/:id', [isAuth], getVillageById);
 router.get('/:id/houses', [isAuth], getHousesByVillage);
 
 
-module.exports = router;
+module.exports = router;    
