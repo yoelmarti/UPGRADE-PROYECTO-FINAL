@@ -2,8 +2,12 @@ const jwt = require('jsonwebtoken');
 const httpStatusCode = require('../utils/httpStatusCode');
 const User = require('../api/models/user.model');
 // const Council = require('../api/models/council.model');
+const ROLE = {
+    USER: 'user',
+    COUNCIL: 'council'
+}
 
-
+// Is a user authenticated?
 const isAuth = (req, res, next) => {
     const authorization = req.headers.authorization;
     if (!authorization) {
@@ -36,32 +40,49 @@ const isAuth = (req, res, next) => {
     next();
 }
 
-const authRole = (roles) => async (req, res, next) => {
-    try {
-        const token = req.headers.authorization.split(' ').pop();
-        const tokenData = jwt.verify(token, process.env.SECRET_SESSION);
-        const userData = await User.findById(tokenData.id);
-        // const councilData = await Council.findById(tokenData.id);
-        // console.log(tokenData);
-        if (roles.includes(userData.role)) {
-            next();
-        // } else if(roles.includes(councilData.role)){
-            
-
-        }else {
+//Is the user authorized?
+const authRole = (role) => {
+    return (req, res, next) => {
+        if(!req.user.role === role){
             res.json({
-                status: 409,
-                message: "No tienes permisos para acceder aquí"
+                status: 401,
+                message: "Not allowed"
             })
         }
-    } catch (error) {
-        res.status(409)
-        next(error);
+        next();
     }
 }
 
 
+// const authRole = (roles) => async (req, res, next) => {
+//     try {
+//         const token = req.headers.authorization.split(' ').pop();
+//         const tokenData = jwt.verify(token, process.env.SECRET_SESSION);
+//         const userData = await User.findById(tokenData.id);
+//         // const councilData = await Council.findById(tokenData.id);
+//         // console.log(tokenData);
+//         if (roles.includes(userData.role)) {
+//             next();
+//         // } else if(roles.includes(councilData.role)){
+            
+
+//         }else {
+//             res.json({
+//                 status: 409,
+//                 message: "No tienes permisos para acceder aquí"
+//             })
+//         }
+//     } catch (error) {
+//         res.status(409)
+//         next(error);
+//     }
+// }
+
+
+
+
 module.exports = {
     isAuth,
-    authRole
+    authRole,
+    ROLE
 }

@@ -2,20 +2,34 @@ const User = require('../models/user.model.js');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const httpStatusCode = require('../../utils/httpStatusCode');
+const { ROLE } = require('../../middlewares/auth.middleware');
 const { validationResult } = require('express-validator');
 
 //Registro de usuario
 const registerUser = async (req, res, next) => {
     try {
-        const newUser = new User();
-        newUser.name = req.body.name;
-        newUser.email = req.body.email;
-        newUser.password = req.body.password;
-        newUser.avatar = req.body.avatar;
-        newUser.children = req.body.children;
-        newUser.birthDate = req.body.birthDate;
-        newUser.profession = req.body.profession;
-        newUser.role = "user";
+        const userAvatar = req.file ? req.file.filename : null;
+        // const newUser = new User();
+        const newUser = new User(
+            { 
+                name: req.body.name,
+                email: req.body.email,
+                password: req.body.password,
+                avatar: userAvatar,
+                children: req.body.children,
+                birthDate: req.body.birthDate,
+                profession: req.body.profession,
+                role: ROLE.USER,
+            }
+        );
+        // newUser.name = req.body.name;
+        // newUser.email = req.body.email;
+        // newUser.password = req.body.password;
+        // newUser.avatar = userAvatar;
+        // newUser.children = req.body.children;
+        // newUser.birthDate = req.body.birthDate;
+        // newUser.profession = req.body.profession;
+        // newUser.role = ROLE.USER;
         const userDb = await newUser.save();
         res.json({
             status: 201,

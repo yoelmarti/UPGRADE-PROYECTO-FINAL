@@ -2,6 +2,7 @@ const Council = require('../models/Council.model.js');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const httpStatusCode = require('../../utils/httpStatusCode');
+const { ROLE } = require('../../middlewares/auth.middleware');
 const { validationResult } = require('express-validator');
 
 //Registro de ayuntamiento
@@ -11,7 +12,7 @@ const registerCouncil = async (req, res, next) => {
         newCouncil.name = req.body.name;
         newCouncil.email = req.body.email;
         newCouncil.password = req.body.password;
-        newCouncil.role = "council";
+        newCouncil.role = ROLE.COUNCIL;
         const councilDb = await newCouncil.save();
         res.json({
             status: 201,
@@ -113,10 +114,12 @@ const updateCouncilData = async (req, res, next) => {
     }
 }
 
+
+
 module.exports = {
     registerCouncil,
     loginCouncil,
     logoutCouncil,
     getCouncilProfile,
-    updateCouncilData
+    updateCouncilData,
 }
