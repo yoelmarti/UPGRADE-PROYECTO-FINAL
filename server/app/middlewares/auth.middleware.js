@@ -41,44 +41,41 @@ const isAuth = (req, res, next) => {
 }
 
 //Is the user authorized?
-const authRole = (role) => {
-    return (req, res, next) => {
-        if(!req.user.role === role){
-            res.json({
-                status: 401,
-                message: "Not allowed"
-            })
-        }
-        next();
-    }
-}
-
-
-// const authRole = (roles) => async (req, res, next) => {
-//     try {
-//         const token = req.headers.authorization.split(' ').pop();
-//         const tokenData = jwt.verify(token, process.env.SECRET_SESSION);
-//         const userData = await User.findById(tokenData.id);
-//         // const councilData = await Council.findById(tokenData.id);
-//         // console.log(tokenData);
-//         if (roles.includes(userData.role)) {
-//             next();
-//         // } else if(roles.includes(councilData.role)){
-            
-
-//         }else {
+// const authRole = (role) => {
+//     return async (req, res, next) => {
+//         const { id } = req.params;
+//         const userById = await User.findById(id);
+//         if(userById.role !== role){
 //             res.json({
-//                 status: 409,
-//                 message: "No tienes permisos para acceder aquí"
+//                 status: 401,
+//                 message: "Not allowed"
 //             })
 //         }
-//     } catch (error) {
-//         res.status(409)
-//         next(error);
+//         next();
 //     }
 // }
 
+//Authorized Roles
+const authRole = (roles) => async (req, res, next) => {
+    try {
+        const token = req.headers.authorization.split(' ').pop();
+        const tokenData = jwt.verify(token, /*app.get("secretKey")*/ process.env.SECRET_SESSION);
+        const userData = await User.findById(tokenData.id);
 
+        if (roles.includes(userData.role)) {
+            next();            
+
+        }else {
+            res.json({
+                status: 409,
+                message: "No tienes permisos para acceder aquí"
+            })
+        }
+    } catch (error) {
+        res.status(409)
+        next(error);
+    }
+}
 
 
 module.exports = {

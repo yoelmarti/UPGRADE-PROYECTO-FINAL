@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 //TODO  authMiddleware
-const { isAuth, authRole } = require('../../middlewares/auth.middleware');
+const { isAuth, authRole, ROLE } = require('../../middlewares/auth.middleware');
 const {upload} = require('../../middlewares/file.middleware');
-const { check, validationResult } = require('express-validator');
+const { check } = require('express-validator');
 
 const {
     registerUser,
@@ -17,7 +17,6 @@ const {
 router.post('/register', [
     check('name')
         .not()
-        .isAlpha()
         .isEmpty()
         .isLength({ min: 3 })
         .withMessage('Name must be at least 3 characters long'),
@@ -34,12 +33,12 @@ router.post('/register', [
         .withMessage('Password must have minimum eight characters, at least one letter, one number and one special character'),        
     check('children')
         .isNumeric()
-, upload.single('avatar')],
+], [upload.single('avatar')],
 registerUser);
 
 router.post('/login', loginUser);
-router.post('/logout', [isAuth], logoutUser);
-router.get('/:id/profile', [isAuth], /*authRole(['user']),*/ getUserProfile);
-router.put('/update-user/:id', [isAuth], updateUserData);
+router.post('/logout', isAuth, logoutUser);
+router.get('/:id/profile', isAuth, authRole(ROLE.USER), getUserProfile);
+router.put('/update-user/:id', isAuth, authRole(ROLE.USER), updateUserData);
 
 module.exports = router;
