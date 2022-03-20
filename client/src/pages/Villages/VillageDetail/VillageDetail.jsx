@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { UserContextLogin } from '../../../contexts/UserContext/UserContextLogin';
 // import Houses from './Houses/Houses'
 const VillageDetail = () => {
   const { villageId } = useParams();
   const [villageDetail, setVillageDetail] = useState(null)
   const [isLoading, setIsLoading] = useState(true);
+  const {user } = useContext(UserContextLogin)
   
+  const [showHouses, setShowHouses] = useState(false)
 
   const [houseList, setHouseList] = useState([])
   
@@ -34,6 +37,10 @@ const VillageDetail = () => {
     }
   },[villageId])
 
+  const handleClick = () =>{
+    setShowHouses(!showHouses)
+  }
+
   if(isLoading){
     return (<>Loading...</>)
   }else{
@@ -41,38 +48,87 @@ const VillageDetail = () => {
     return (
       <div>
         <div>
-          <p>{villageDetail.name}</p>
-          <img src={`http://localhost:4000/public' ${villageDetail.image}`} alt=''/>
-          <p>Provincia: {villageDetail.location.province}</p>
-          <p>Comunidad: {villageDetail.location.region}</p>
-          <p>Habitantes: {villageDetail.population}</p>
-          <p>{villageDetail.description}</p>
-          <Link to='https://kuartango.eus/' path='https://kuartango.eus/'>{villageDetail.web}</Link>
-          <div>
-            <p>Servicios</p>
-            <div>
-              {villageDetail.features.bar ? <svg width="512px" height="512px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title>ionicons-v5-d</title><path d="M432,64H96A16,16,0,0,0,80,80V272a96.11,96.11,0,0,0,96,96H288a96.11,96.11,0,0,0,96-96V192h18a62.07,62.07,0,0,0,62-62V96A32,32,0,0,0,432,64Zm0,66a30,30,0,0,1-30,30H384V96h48Z"/><path d="M400,400H64a16,16,0,0,0,0,32H400a16,16,0,0,0,0-32Z"/></svg> : null}
-              {villageDetail.features.farmacy ? <svg width="512px" height="512px" viewBox="-32 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M448 358.4V25.6c0-16-9.6-25.6-25.6-25.6H96C41.6 0 0 41.6 0 96v320c0 54.4 41.6 96 96 96h326.4c12.8 0 25.6-9.6 25.6-25.6v-16q0-9.6-9.6-19.2c-3.2-16-3.2-60.8 0-73.6q9.6-4.8 9.6-19.2zM144 168a8 8 0 0 1 8-8h56v-56a8 8 0 0 1 8-8h48a8 8 0 0 1 8 8v56h56a8 8 0 0 1 8 8v48a8 8 0 0 1-8 8h-56v56a8 8 0 0 1-8 8h-48a8 8 0 0 1-8-8v-56h-56a8 8 0 0 1-8-8zm236.8 280H96c-19.2 0-32-12.8-32-32s16-32 32-32h284.8z"/></svg> : null}
-              {villageDetail.features.supermarket ? <p>supermarket</p> : null}
-              {villageDetail.features.doctor ? <p>doctor</p> : null}
+          <div className='w-screen'>
+            <p className='w-3/5 m-auto pl-[50px] pb-4 text-7xl text-[#481620]'>{villageDetail.name}</p>
+            <img className='w-full md:w-2/3 xl:w-3/5 m-auto' src={`http://localhost:4000/public' ${villageDetail.image}`} alt={villageDetail.name}/>
+            <div className='flex w-3/5 m-auto pt-2 pl-5'>
+              <img className='w-[22px]' src={`http://localhost:4000/public/location-icon.svg`} alt='location'/>
+              <span> {villageDetail.location.province},</span>
+              <span className=' ml-3'>{villageDetail.location.region}</span>
+              <div className='flex justify-self-end'>
+                <img src={`http://localhost:4000/public/population-icon.svg`} alt='Habitantes'/>
+                <span className=''>{villageDetail.population}</span>
+              </div>
+            </div>
+          <div className='flex md:w-3/5 m-auto text-center mt-[50px] md:flex-row'>
+            <div className='w-full md:w-2/4 my-auto '>
+              <p className='text-2xl pb-10'>Conoce {villageDetail.name}</p>
+              <p className='text-jsutify tracking-wider'>{villageDetail.description}</p>
+            </div>
+            <div className='text-center  w-full md:w-2/4'>
+              <p className='text-2xl pb-10'>Servicios</p>
+              <div className='flex flex-col justify-center pl-[80px] text-xl'>
+                {villageDetail.features.bar ? 
+                  <div className='flex items-center mb-3'>
+                  <img className='w-[40px] mr-10' src={`http://localhost:4000/public/bar-icon.svg`} alt='Bar'/><p>Bar</p>
+                  </div>
+                : null}
+                {villageDetail.features.farmacy ?
+                <div className='flex items-center mb-3'>
+                  <img className='w-[40px] mr-10' src={`http://localhost:4000/public/medico-icon.svg`} alt='Farmacia'/><p>Farmacia</p> 
+                </div>
+                : null}
+                {villageDetail.features.supermarket ? 
+                <div className='flex items-center mb-3'>
+                  <img className='w-[40px] mr-10' src={`http://localhost:4000/public/market-icon.svg`} alt='Supermercado'/><p>Supermercado</p> 
+                </div>
+                : null}
+                {villageDetail.features.doctor ? 
+                <div className='flex items-center'>
+                  <img className='w-[40px] mr-10' src={`http://localhost:4000/public/doctor-icon.svg`} alt='Doctor' /><p>Médico</p> 
+                </div>
+                : null}
+              </div>
+            </div>
+          </div>
+          </div>
+            <div className='text-center mt-20'>
+              <Link to='https://kuartango.eus/' path='https://kuartango.eus/'>{villageDetail.web}</Link>
+            </div>
+        </div>
+          <div className='text-center pt-[80px]'>
+            <button className='w-[180px] h-[45px] rounded-full bg-[#4C6663] hover:bg-[#CC998D] font-normal text-white' onClick={handleClick}>ver casas</button>
+          </div>
+        <div className='pt-[50px] lg:pt-[80px] pb-10 lg:pb-20 text-[#481620] font-medium'>
+              <div className="container mx-10" >
+                <div className="flex flex-wrap -mx-4">
+            {user && showHouses ? 
+              houseList.map((house)=>{return(
+                <div className='w-full md:w-1/2 xl:w-1/3 px-4' key={house.refh}>
+                    <div className='rounded-lg overflow-hidden mb-10 border-2 border-grey bg-[#CC998D]'>
+                    <img className="w-full h-[300px]" src={`http://localhost:4000/public' ${house.image}`} alt={`casa ${house.refh}`}/>
+                        <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                        <div className='flex items-center'>
+                            <img className='w-[30px]' src={`http://localhost:4000/public/m2-icon.svg`} alt='Metros cuadrados'/><span className='pl-6'>{house.meters} - Metros cuadrados</span>
+                            </div>
+                            <div className='flex items-center'>
+                                <img className='w-[30px]' src={`http://localhost:4000/public/rooms-icon.svg`} alt='Habitaciones'/><span className='pl-6'>{house.rooms} - Habitaciones</span>
+                            </div>
+                            <div className='flex items-center'>
+                            <img className='w-[30px]' src={`http://localhost:4000/public/bath-icon.svg`} alt='Baños'/><span className='pl-6'>{house.bathrooms} - Baños</span>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+              )
+            })
+            : null}
+            {!user && showHouses ? <p>Si quieres ver las casas disponibles tienes que <Link to='/iniciar-sesion'>Iniciar Sesion</Link></p> : null}
             </div>
           </div>
         </div>
-        
-        {houseList.map((house)=>{return(
-          <>
-            <div key={house.refh}>
-              <img className="w-[200px] h-[200px]" src={`http://localhost:4000/public' ${house.image}`} alt={`casa ${house.refh}`}/>
-              <p>{house.meters}</p>
-
-            </div>
-          </>
-          
-        )
-        })}
       </div>
     )
-    
   }
 }
 
