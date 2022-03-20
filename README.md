@@ -74,8 +74,8 @@ To run this project, install it locally using npm
 
 ## Screenshots
 
-<img src="./assets/logo.png" alt="Logo">
-<img src="./assets/modelo-de-datos.PNG" alt="Modelo de datos">
-<img src="./assets/rutas.PNG" alt="Rutas y flujos">
+<img src="./assets/logo.PNG" alt="Logo">
+<img src="./assets/Modelo-de-datos.PNG" alt="Modelo de datos">
+<img src="./assets/Rutas.PNG" alt="Rutas y flujos">
 <img src="./assets/Trello1.png" alt="Trello">
 <img src="./assets/Trello2.png" alt="Trello2">
