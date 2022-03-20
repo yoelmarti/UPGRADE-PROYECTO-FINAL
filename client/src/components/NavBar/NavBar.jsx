@@ -15,7 +15,7 @@ const NavBar = () => {
           <Link to='/registro'>Registro</Link>
         }
         {user ? 
-          <button onClick={logoutUser}>Logout</button> : 
+          <p onClick={logoutUser}>Logout</p> : 
           <Link to='/iniciar-sesion'>Login</Link>
         }
     </nav>

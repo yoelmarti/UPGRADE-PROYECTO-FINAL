@@ -27,7 +27,6 @@ export const UserProvider = ({children}) => {
                 body: JSON.stringify(loginData)
             });
             const response = await request.json();
-
             localStorage.setItem('user', JSON.stringify(response.data.user))
             setToken(response.data.token)
 
@@ -53,7 +52,6 @@ export const UserProvider = ({children}) => {
     const logoutUser = () => {
         setUser(null);
         localStorage.removeItem('user');
-        localStorage.removeItem('token')
     };
 
     const userLoginState = {
