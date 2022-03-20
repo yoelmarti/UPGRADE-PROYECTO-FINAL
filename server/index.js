@@ -7,7 +7,7 @@ const villageRouter = require('./app/api/routes/village.routes');
 const houseRouter = require('./app/api/routes/house.routes');
 const councilRouter = require('./app/api/routes/council.routes');
 const path = require('path');
-const cors = require('cors')
+const cors = require('cors');
 const { connect } = require('./app/database/connect');
 connect();
 
@@ -26,6 +26,7 @@ server.use((req, res, next) => {
       origin: ['http://localhost:4000','http://localhost:3000'],
       credentials: true
   }))
+
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
@@ -50,5 +51,5 @@ server.use((err, req, res, next) => {
 })
 
 server.listen(PORT, () => {
-    console.log(`Servidor arrancado en puerto ${PORT}`);
+    console.log(`Server listening at port ${PORT}`);
 })

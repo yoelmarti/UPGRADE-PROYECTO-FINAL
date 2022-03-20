@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 //TODO  authMiddleware
 const { isAuth, authRole } = require('../../middlewares/auth.middleware');
+const {upload} = require('../../middlewares/file.middleware');
 const { check, validationResult } = require('express-validator');
 
 const {
@@ -33,12 +34,12 @@ router.post('/register', [
         .withMessage('Password must have minimum eight characters, at least one letter, one number and one special character'),        
     check('children')
         .isNumeric()
-],
+, upload.single('avatar')],
 registerUser);
 
 router.post('/login', loginUser);
 router.post('/logout', [isAuth], logoutUser);
-router.get('/:id/profile', [isAuth], authRole(['user']), getUserProfile);
+router.get('/:id/profile', [isAuth], /*authRole(['user']),*/ getUserProfile);
 router.put('/update-user/:id', [isAuth], updateUserData);
 
 module.exports = router;
