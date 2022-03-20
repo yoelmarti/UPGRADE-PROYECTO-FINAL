@@ -28,7 +28,9 @@ To create a website that serves as a platform for town councils that would like 
 Any person that accesses the Website will be able to visualize generic information of the participating towns. Nevertheless, **people interested in viewing the available houses and in contacting the town councils must be not only registered but logged in.**.
 ### /pueblos
 Will show a complete list of participating towns. Clicking on each of the towns will take to the town card, in which the user will find more information about the village. If the user is logged in will be also able to see the available houses and to contact the town council through the platform.
+
 ### /registro /iniciar-sesion
+
 Users will access register section and provide basic information about them and their families. 
 Town councils will have to contact the platform and, in case of viability, they will be provided with an specific access that in the future will allow them to upload and edit their information.
 
@@ -54,7 +56,7 @@ Town councils will have to contact the platform and, in case of viability, they 
 - Each collection with its model.js
 - houses y villages populated with seeds.
 
-    ## Color Reference
+## Color Reference
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
