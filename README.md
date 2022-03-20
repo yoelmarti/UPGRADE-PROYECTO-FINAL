@@ -2,7 +2,7 @@
 Upgrade Hub Full Stack Program - Final Project (Created with Node.js, React and Mongo DB)
 
 ## Table of Contents
-* [Goal](##Goal)
+* [Goal](#Goal)
 * [Authors](#Authors)
 * [Technologies](#Technologies)
 * [Use](#Use)
@@ -28,9 +28,7 @@ To create a website that serves as a platform for town councils that would like 
 Any person that accesses the Website will be able to visualize generic information of the participating towns. Nevertheless, **people interested in viewing the available houses and in contacting the town councils must be not only registered but logged in.**.
 ### /pueblos
 Will show a complete list of participating towns. Clicking on each of the towns will take to the town card, in which the user will find more information about the village. If the user is logged in will be also able to see the available houses and to contact the town council through the platform.
-
 ### /registro /iniciar-sesion
-
 Users will access register section and provide basic information about them and their families. 
 Town councils will have to contact the platform and, in case of viability, they will be provided with an specific access that in the future will allow them to upload and edit their information.
 
@@ -44,8 +42,9 @@ Town councils will have to contact the platform and, in case of viability, they 
 - Added a httpStatusCode util to control messages.
 - CRUD controller and routes.
 - Defined routes on index.
-- Fake vercel entry point to deployment.
-- Test CRUD with Postman:
+- Test CRUD with Postman
+- Images upload
+
 ### Client
 
 
@@ -76,3 +75,7 @@ To run this project, install it locally using npm
 ## Screenshots
 
 <img src="./assets/logo.png" alt="Logo">
+<img src="./assets/modelo-de-datos.PNG" alt="Modelo de datos">
+<img src="./assets/rutas.PNG" alt="Rutas y flujos">
+<img src="./assets/Trello1.png" alt="Trello">
+<img src="./assets/Trello2.png" alt="Trello2">
