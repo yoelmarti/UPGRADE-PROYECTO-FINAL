@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// const User = require('../../api/models/user.model');
 const uniqueValidator = require('mongoose-unique-validator');
 
 const bcrypt = require('bcrypt');
@@ -14,6 +15,7 @@ const councilSchema = new Schema(
         houses: [ { type: mongoose.Types.ObjectId, ref: 'houses' }],
     },
     {
+        collection: 'users',
         timestamps: true,
     }
 );

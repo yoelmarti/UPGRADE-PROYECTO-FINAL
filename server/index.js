@@ -35,7 +35,7 @@ server.set("secretKey", process.env.SECRET_SESSION);
 
 server.use(logger('dev'));
 
-//enrutado de iamgenes
+//enrutado de imágenes
 server.use('/public', express.static(path.join(__dirname, 'public')));
 
 //Enrutado

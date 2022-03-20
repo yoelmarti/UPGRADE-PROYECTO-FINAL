@@ -8,6 +8,14 @@ const { validationResult } = require('express-validator');
 //Registro de usuario
 const registerUser = async (req, res, next) => {
     try {
+        const errorFormatter = ({ location, msg, param, value, nestedErrors }) => {
+            return `[${param}]: ${msg}`;
+          };
+          const result = validationResult(req).formatWith(errorFormatter);
+          if (!result.isEmpty()) {
+            return res.status(422).json({ errors: result.array() });
+          }
+        
         const userAvatar = req.file ? req.file.filename : null;
         // const newUser = new User();
         const newUser = new User(
@@ -22,14 +30,6 @@ const registerUser = async (req, res, next) => {
                 role: ROLE.USER,
             }
         );
-        // newUser.name = req.body.name;
-        // newUser.email = req.body.email;
-        // newUser.password = req.body.password;
-        // newUser.avatar = userAvatar;
-        // newUser.children = req.body.children;
-        // newUser.birthDate = req.body.birthDate;
-        // newUser.profession = req.body.profession;
-        // newUser.role = ROLE.USER;
         const userDb = await newUser.save();
         res.json({
             status: 201,
@@ -80,7 +80,7 @@ const loginUser = async (req, res, next) => {
     } catch (error) {
         next(error)
     }
-}
+};
 
 const logoutUser = (req, res, next) => {
     try {
@@ -93,7 +93,6 @@ const logoutUser = (req, res, next) => {
         next(error)
     }
 };
-
 
 const getUserProfile = async (req, res, next) => {
     try {
@@ -117,7 +116,7 @@ const getUserProfile = async (req, res, next) => {
     } catch (error) {
         return next(error);
     }
-}
+};
 
 const updateUserData = async (req, res, next) => {
     try {
@@ -133,7 +132,7 @@ const updateUserData = async (req, res, next) => {
     } catch (error) {
         return next(error);
     }
-}
+};
 
 module.exports = {
     registerUser,
