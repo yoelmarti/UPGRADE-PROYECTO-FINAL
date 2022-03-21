@@ -4,7 +4,8 @@ const { isAuth, authRole, ROLE } = require('../../middlewares/auth.middleware');
 const {
     getAllVillages, 
     getVillageById,
-    getHousesByVillage
+    getHousesByVillage,
+    updateVillageData
 } = require('../controllers/village.controller');
 
 
@@ -15,5 +16,6 @@ router.get('/', getAllVillages);
 
 router.get('/:id', getVillageById);
 router.get('/:id/houses', isAuth, authRole(ROLE.USER), getHousesByVillage);
+router.put('/update-village/:id', authRole(ROLE.USER), updateVillageData)
 
 module.exports = router;

@@ -28,9 +28,9 @@ router.post('/register', [
         .not()
         .isEmpty()
         .isLength({ min: 8, max: 20 })
-        //Minimum eight characters, at least one letter, one number and one special character
-        .matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)
-        .withMessage('Password must have minimum eight characters, at least one letter, one number and one special character'),        
+        //Password must contain at least one letter, at least one number, and be longer than six charaters.
+        // .matches(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)
+        .withMessage('Password must contain at least one letter, at least one number, and be longer than six charaters.'),        
     check('children')
         .isNumeric()
 ], [upload.single('avatar')],
