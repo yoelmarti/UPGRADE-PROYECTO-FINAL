@@ -34,7 +34,7 @@ Town councils will have to contact the platform and, in case of viability, they 
 
 ## How we did it
 ### Server
-- Generate of a node server.
+- Generate a node server.
 - Install dependencies: express, mongoose, dotenv, morgan and nodemon.
 - Create the main skeleton with the controllers, models, routes and seeds folders.
 - Configure MongoAtlas connection through Mongoose.
@@ -74,8 +74,8 @@ To run this project, install it locally using npm
 
 ## Screenshots
 
-<img src="./assets/logo.png" alt="Logo">
-<img src="./assets/modelo-de-datos.PNG" alt="Modelo de datos">
-<img src="./assets/rutas.PNG" alt="Rutas y flujos">
+<img src="./assets/Logo.PNG" alt="Logo">
+<img src="./assets/Modelo-de-datos.PNG" alt="Modelo de datos">
+<img src="./assets/Rutas.PNG" alt="Rutas y flujos">
 <img src="./assets/Trello1.png" alt="Trello">
 <img src="./assets/Trello2.png" alt="Trello2">
