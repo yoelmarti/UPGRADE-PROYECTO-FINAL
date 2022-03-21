@@ -16,8 +16,8 @@ const Register = () => {
     const navigate = useNavigate();
     const [registerFormData, setRegisterFormData] = useState(INITIAL_STATE_REGISTER);
 
-    const submitForm = (ev) => {
-        ev.preventDefault();
+    const registerUser = async () => {
+        // ev.preventDefault();
         //Se asignan los valores de lo recogido en los inputs y se asigna al body
         const body = {
             name: registerFormData.name,
@@ -29,7 +29,6 @@ const Register = () => {
             avatar: registerFormData.avatar,
         }
 
-    const registerUser = async () => {
         try {
             const request = await fetch('http://localhost:4000/users/register', {
                 method: 'POST',
@@ -45,9 +44,15 @@ const Register = () => {
         } catch (error) {
             console.error(error);
         }
-        };
-        registerUser();
+
     };
+
+    const submitForm = (ev) => {
+        ev.preventDefault();
+        
+        registerUser();
+    }
+
 
     const handleInput = (ev) => {
         const {name, value} = ev.target;

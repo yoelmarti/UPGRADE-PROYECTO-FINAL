@@ -3,16 +3,19 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const httpStatusCode = require('../../utils/httpStatusCode');
 const { ROLE } = require('../../middlewares/auth.middleware');
-const { validationResult } = require('express-validator');
+// const { validationResult } = require('express-validator');
 
 //Registro de ayuntamiento
 const registerCouncil = async (req, res, next) => {
     try {
-        const newCouncil = new Council();
-        newCouncil.name = req.body.name;
-        newCouncil.email = req.body.email;
-        newCouncil.password = req.body.password;
-        newCouncil.role = ROLE.COUNCIL;
+        const newCouncil = new Council({
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password,
+            role: ROLE.COUNCIL,
+            village: req.body.village
+        });
+
         const councilDb = await newCouncil.save();
         res.json({
             status: 201,
@@ -87,10 +90,9 @@ const getCouncilProfile = async (req, res, next) => {
             message: httpStatusCode[200],
             data: {
                 councilId: council._id,
+                name: council.name,
                 email: council.email,
-                password: council.password,
-                // role: council.role
-                // houses: council.houses,
+                village: council.village,
             }
         })
     } catch (error) {
@@ -113,6 +115,7 @@ const updateCouncilData = async (req, res, next) => {
         return next(error);
     }
 }
+
 
 
 

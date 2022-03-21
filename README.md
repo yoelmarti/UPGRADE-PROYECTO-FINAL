@@ -2,7 +2,7 @@
 Upgrade Hub Full Stack Program - Final Project (Created with Node.js, React and Mongo DB)
 
 ## Table of Contents
-* [Goal](##Goal)
+* [Goal](#Goal)
 * [Authors](#Authors)
 * [Technologies](#Technologies)
 * [Use](#Use)
@@ -42,8 +42,9 @@ Town councils will have to contact the platform and, in case of viability, they 
 - Added a httpStatusCode util to control messages.
 - CRUD controller and routes.
 - Defined routes on index.
-- Fake vercel entry point to deployment.
-- Test CRUD with Postman:
+- Test CRUD with Postman
+- Images upload
+
 ### Client
 
 
@@ -54,7 +55,7 @@ Town councils will have to contact the platform and, in case of viability, they 
 - Each collection with its model.js
 - houses y villages populated with seeds.
 
-    ## Color Reference
+## Color Reference
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
@@ -73,4 +74,8 @@ To run this project, install it locally using npm
 
 ## Screenshots
 
-<img src="./assets/logo.png" alt="Logo">
+<img src="./assets/Logo.PNG" alt="Logo">
+<img src="./assets/Modelo-de-datos.PNG" alt="Modelo de datos">
+<img src="./assets/Rutas.PNG" alt="Rutas y flujos">
+<img src="./assets/Trello1.png" alt="Trello">
+<img src="./assets/Trello2.png" alt="Trello2">

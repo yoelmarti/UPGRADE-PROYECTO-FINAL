@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// const User = require('../../api/models/user.model');
 const uniqueValidator = require('mongoose-unique-validator');
 
 const bcrypt = require('bcrypt');
@@ -11,9 +12,10 @@ const councilSchema = new Schema(
         email: { type: String, required: true, unique: true }, //Indicamos que el campo email sólo puede tenerlo un usuario
         password: { type: String, required: true },
         role: { type: String},
-        houses: [ { type: mongoose.Types.ObjectId, ref: 'houses' }],
+        village:  [{ type: mongoose.Types.ObjectId, ref: 'villages' }],
     },
     {
+        collection: 'users',
         timestamps: true,
     }
 );

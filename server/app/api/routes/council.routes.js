@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
-//TODO  authMiddleware
 const { isAuth, authRole } = require('../../middlewares/auth.middleware');
 const { ROLE } = require('../../middlewares/auth.middleware');
-const { check, validationResult } = require('express-validator');
+// const { check, validationResult } = require('express-validator');
 
 const {
     registerCouncil,
@@ -17,8 +16,8 @@ const {
 router.post('/register', registerCouncil);
 
 router.post('/login', loginCouncil);
-router.post('/logout', [isAuth], logoutCouncil);
-router.get('/:id/profile', [isAuth], authRole(ROLE.USER), getCouncilProfile);
-router.put('/update-council/:id', [isAuth], authRole(ROLE.COUNCIL), updateCouncilData);
+router.post('/logout', isAuth, logoutCouncil);
+router.get('/:id/profile', isAuth, authRole(ROLE.COUNCIL), getCouncilProfile);
+router.put('/update-council/:id', isAuth, authRole(ROLE.COUNCIL), updateCouncilData);
 
 module.exports = router;
