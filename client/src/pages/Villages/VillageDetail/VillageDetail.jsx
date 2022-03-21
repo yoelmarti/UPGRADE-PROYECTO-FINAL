@@ -49,17 +49,17 @@ const VillageDetail = () => {
     return (
       <div>
         <div>
-          <div className='min-w-screen'>
+          <div className='min-w-screen drop-shadow-2xl'>
             <p className='w-3/5 m-auto pl-[50px] pb-4 text-7xl text-[#481620]'>{villageDetail.name}</p>
             <img className='w-full md:w-2/3 xl:w-3/5 m-auto' src={`http://localhost:4000/public' ${villageDetail.image}`} alt={villageDetail.name}/>
             
-            <div className='flex w-3/5 m-auto pt-2 pl-5'>
+            <div className='flex w-3/5 m-auto pt-4 pl-5'>
               <img className='w-[22px]' src={`http://localhost:4000/public/location-icon.svg`} alt='location'/>
               <span> {villageDetail.location.province},</span>
               <span className=' ml-3'>{villageDetail.location.region}</span>
-              <div className='flex justify-self-end'>
+              <div className='flex pl-[550px]'>
                 <img src={`http://localhost:4000/public/population-icon.svg`} alt='Habitantes'/>
-                <span className=''>{villageDetail.population}</span>
+                <span className='ml-4'>{villageDetail.population}</span>
               </div>
             </div>
 
@@ -105,11 +105,11 @@ const VillageDetail = () => {
             <button className='w-[180px] h-[45px] rounded-full bg-[#4C6663] hover:bg-[#CC998D] font-normal text-white' onClick={handleClick}>ver casas</button>
           </div>
         <div className='pt-[50px] lg:pt-[80px] pb-10 lg:pb-20 text-[#481620] font-medium'>
-              <div className="container" >
-                <div className="flex flex-wrap m-auto">
+              <div className="container px-5 py-24 mx-auto" >
+                <div className="flex flex-wrap -m-4">
             {user && showHouses ? 
               houseList.map((house)=>{return(
-                <div className='w-full md:w-1/2 xl:w-1/3 px-4' key={house.refh}>
+                <div className='p-4 sm:w-1/2 lg:w-1/3' key={house.refh}>
                     <div className='rounded-lg overflow-hidden mb-10 bg-[#CC998D] border-2 border-[#CC998D]'>
                     <img className="w-full h-[300px] rounded-b-lg" src={`http://localhost:4000/public' ${house.image}`} alt={`casa ${house.refh}`}/>
                         <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
