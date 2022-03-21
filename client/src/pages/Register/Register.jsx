@@ -60,7 +60,7 @@ const Register = () => {
     };
 
     return (
-        <div className='min-h-screen flex items-stretch text-white'>
+        <div className='min-h-screen flex items-stretch text-white relative'>
         <div className="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center bg-[url('https://images.unsplash.com/photo-1620581261303-e905d1dbe0eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')]">
             <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
             <div className="w-full px-24 z-10">
@@ -74,7 +74,7 @@ const Register = () => {
                 <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
             </div>
             
-            <div className='w-full py-6 z-20'>
+            <div className='w-full py-6 z-20 '>
                 <form className='sm:w-2/3 w-full px-4 lg:px-0 mx-auto' onSubmit={submitForm}>
                     <div className='pb-2 pt-4'>
                         
@@ -107,12 +107,12 @@ const Register = () => {
 
                     <div className='pb-2 pt-4'>
                         <input type='checkbox' className='accent-[#744253]'></input>
-                        <span className='text-black'>Acepto la política de privacidad y el Aviso Legal</span>
+                        <span className='lg:text-black md:text-white'>Acepto la política de privacidad y el Aviso Legal</span>
                     </div>
                     <div className='px-4 pb-2 pt-4'>
                         <button type='submit' className='uppercase block w-full p-4 text-lg rounded-full bg-[#744253] hover:bg-[#CC998D] focus:outline-none '>Registrarme</button>
                     </div>
-                    <p className='text-black'>¿Ya estas registrado? <Link to='/iniciar-sesion' className='hover:text-[#CC998D]'>Inicia sesión</Link></p>
+                    <p className='lg:text-black md:text-white'>¿Ya estas registrado? <Link to='/iniciar-sesion' className='hover:text-[#CC998D]'>Inicia sesión</Link></p>
                 </form>
             </div>
         </div>

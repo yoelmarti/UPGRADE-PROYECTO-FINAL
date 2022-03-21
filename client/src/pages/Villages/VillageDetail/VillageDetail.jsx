@@ -48,9 +48,10 @@ const VillageDetail = () => {
     return (
       <div>
         <div>
-          <div className='w-screen'>
+          <div className='min-w-screen'>
             <p className='w-3/5 m-auto pl-[50px] pb-4 text-7xl text-[#481620]'>{villageDetail.name}</p>
             <img className='w-full md:w-2/3 xl:w-3/5 m-auto' src={`http://localhost:4000/public' ${villageDetail.image}`} alt={villageDetail.name}/>
+            
             <div className='flex w-3/5 m-auto pt-2 pl-5'>
               <img className='w-[22px]' src={`http://localhost:4000/public/location-icon.svg`} alt='location'/>
               <span> {villageDetail.location.province},</span>
@@ -60,6 +61,8 @@ const VillageDetail = () => {
                 <span className=''>{villageDetail.population}</span>
               </div>
             </div>
+
+
           <div className='flex md:w-3/5 m-auto text-center mt-[50px] md:flex-row'>
             <div className='w-full md:w-2/4 my-auto '>
               <p className='text-2xl pb-10'>Conoce {villageDetail.name}</p>
@@ -96,18 +99,19 @@ const VillageDetail = () => {
               <Link to='https://kuartango.eus/' path='https://kuartango.eus/'>{villageDetail.web}</Link>
             </div>
         </div>
+
           <div className='text-center pt-[80px]'>
             <button className='w-[180px] h-[45px] rounded-full bg-[#4C6663] hover:bg-[#CC998D] font-normal text-white' onClick={handleClick}>ver casas</button>
           </div>
         <div className='pt-[50px] lg:pt-[80px] pb-10 lg:pb-20 text-[#481620] font-medium'>
-              <div className="container mx-10" >
-                <div className="flex flex-wrap -mx-4">
+              <div className="container" >
+                <div className="flex flex-wrap m-auto">
             {user && showHouses ? 
               houseList.map((house)=>{return(
                 <div className='w-full md:w-1/2 xl:w-1/3 px-4' key={house.refh}>
-                    <div className='rounded-lg overflow-hidden mb-10 border-2 border-grey bg-[#CC998D]'>
-                    <img className="w-full h-[300px]" src={`http://localhost:4000/public' ${house.image}`} alt={`casa ${house.refh}`}/>
-                        <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                    <div className='rounded-lg overflow-hidden mb-10 bg-[#CC998D] border-2 border-[#CC998D]'>
+                    <img className="w-full h-[300px] rounded-b-lg" src={`http://localhost:4000/public' ${house.image}`} alt={`casa ${house.refh}`}/>
+                        <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                         <div className='flex items-center'>
                             <img className='w-[30px]' src={`http://localhost:4000/public/m2-icon.svg`} alt='Metros cuadrados'/><span className='pl-6'>{house.meters} - Metros cuadrados</span>
                             </div>
@@ -123,8 +127,12 @@ const VillageDetail = () => {
               )
             })
             : null}
-            {!user && showHouses ? <p>Si quieres ver las casas disponibles tienes que <Link to='/iniciar-sesion'>Iniciar Sesion</Link></p> : null}
             </div>
+            {!user && showHouses ? 
+            <div>
+              <p className='text-center'>Si quieres ver las casas disponibles tienes que <Link to='/iniciar-sesion'>Iniciar Sesion</Link></p> 
+            </div>
+            : null}
           </div>
         </div>
       </div>
