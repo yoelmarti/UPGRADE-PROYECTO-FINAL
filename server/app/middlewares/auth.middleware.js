@@ -1,7 +1,8 @@
+// require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const httpStatusCode = require('../utils/httpStatusCode');
 const User = require('../api/models/user.model');
-// const Council = require('../api/models/council.model');
+
 const ROLE = {
     USER: 'user',
     COUNCIL: 'council'
@@ -58,7 +59,21 @@ const isAuth = (req, res, next) => {
 //Authorized Roles
 const authRole = (roles) => async (req, res, next) => {
     try {
-        const token = req.headers.authorization.split(' ').pop();
+        //////
+        // console.log(req.headers); 
+        const authorization = req.headers.authorization;
+        if (!authorization) {
+            return res.json({
+                status: 401,
+                message: httpStatusCode[401],
+                data: null
+            })
+        }
+        ///////
+
+        
+        const token = req.headers.authorization.split(" ")[1];
+        console.log(token);
         const tokenData = jwt.verify(token, /*app.get("secretKey")*/ process.env.SECRET_SESSION);
         const userData = await User.findById(tokenData.id);
 

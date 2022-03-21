@@ -6,7 +6,7 @@ const VillageDetail = () => {
   const { villageId } = useParams();
   const [villageDetail, setVillageDetail] = useState(null)
   const [isLoading, setIsLoading] = useState(true);
-  const {user } = useContext(UserContextLogin)
+  const {user } = useContext(UserContextLogin);
   
   const [showHouses, setShowHouses] = useState(false)
 
@@ -24,7 +24,9 @@ const VillageDetail = () => {
         fetch(`http://localhost:4000/villages/${villageId}/houses`)
         .then((res)=>{return res.json()})
         .then((data)=>{
+          console.log(data);
             const pueblo = data.data.info[0].houses;
+            console.log(pueblo);
             setHouseList(pueblo);
 
         })
