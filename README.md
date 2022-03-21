@@ -34,7 +34,7 @@ Town councils will have to contact the platform and, in case of viability, they 
 
 ## How we did it
 ### Server
-- Generate of a node server.
+- Generate a node server.
 - Install dependencies: express, mongoose, dotenv, morgan and nodemon.
 - Create the main skeleton with the controllers, models, routes and seeds folders.
 - Configure MongoAtlas connection through Mongoose.
