@@ -5,7 +5,7 @@ const { ROLE } = require('../../middlewares/auth.middleware');
 // const { check, validationResult } = require('express-validator');
 
 const {
-    // registerCouncil,
+    registerCouncil,
     loginCouncil,
     logoutCouncil,
     getCouncilProfile,
@@ -13,7 +13,7 @@ const {
 } = require('../controllers/Council.controller');
 
 
-// router.post('/register', registerCouncil);
+router.post('/register', registerCouncil);
 
 router.post('/login', loginCouncil);
 router.post('/logout', isAuth, logoutCouncil);

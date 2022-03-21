@@ -65,8 +65,25 @@ const getHousesByVillage = async (req, res, next) => {
     }
 }
 
+const updateVillageData = async (req, res, next) => {
+    try {
+        const villageId = req.params.id;
+        const village = await Village.findByIdAndUpdate( villageId, {
+            $set: req.body
+        }, {new:true});
+        return res.json({
+            status: 200,
+            message: httpStatusCode[200],
+            data: "Village successfully updated"
+        })
+    } catch (error) {
+        return next(error);
+    }
+};
+
 module.exports = {
     getAllVillages,
     getVillageById,
-    getHousesByVillage
+    getHousesByVillage,
+    updateVillageData
 }
