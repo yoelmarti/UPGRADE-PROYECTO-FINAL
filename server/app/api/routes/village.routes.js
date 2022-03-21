@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { isAuth, authRole, ROLE } = require('../../middlewares/auth.middleware');
+const { isAuth } = require('../../middlewares/auth.middleware');
+const { authRole, ROLE } = require('../../middlewares/roles.middleware');
 const {
     getAllVillages, 
     getVillageById,
@@ -15,7 +16,7 @@ router.get('/', getAllVillages);
 //router.get('/:id/houses', [isAuth], getHousesByVillage);
 
 router.get('/:id', getVillageById);
-router.get('/:id/houses', /*[isAuth],*/ /*authRole(ROLE.USER),*/ getHousesByVillage);
+router.get('/:id/houses', /*isAuth,*/ /*authRole(ROLE.USER),*/ getHousesByVillage);
 router.put('/update-village/:id', authRole(ROLE.USER), updateVillageData)
 
 module.exports = router;

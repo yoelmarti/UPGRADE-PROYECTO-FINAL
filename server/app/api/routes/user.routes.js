@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 //TODO  authMiddleware
-const { isAuth, authRole, ROLE } = require('../../middlewares/auth.middleware');
+const { isAuth } = require('../../middlewares/auth.middleware');
+const { authRole, ROLE } = require('../../middlewares/roles.middleware');
 const { upload } = require('../../middlewares/file.middleware');
 const { check } = require('express-validator');
 
