@@ -2,7 +2,7 @@ const Council = require('../models/Council.model.js');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const httpStatusCode = require('../../utils/httpStatusCode');
-const { ROLE } = require('../../middlewares/auth.middleware');
+const { ROLE } = require('../../middlewares/roles.middleware');
 // const { validationResult } = require('express-validator');
 
 //Registro de ayuntamiento
