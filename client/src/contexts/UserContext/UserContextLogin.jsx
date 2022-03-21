@@ -49,10 +49,11 @@ export const UserProvider = ({children}) => {
     }
     }
 
-    const logoutUser = () => {
+    const logoutUser = (prevRoute) => {
         setUser(null);
         localStorage.removeItem('user');
         localStorage.removeItem('token');
+        navigate('/');
     };
 
     const userLoginState = {

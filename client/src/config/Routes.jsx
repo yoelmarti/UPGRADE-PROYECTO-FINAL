@@ -7,6 +7,7 @@ const VillageDetail = React.lazy (()=>import('../pages/Villages/VillageDetail/Vi
 const Houses = React.lazy(()=>import('../pages/Villages/VillageDetail/Houses/Houses.jsx'))
 const Register = React.lazy (()=>import('../pages/Register/Register'));
 const LogIn = React.lazy (()=>import('../pages/LogIn/LogIn'));
+const Profile = React.lazy (()=>import('../pages/Profile/Profile'));
 
 
 const routes = [
@@ -18,6 +19,10 @@ const routes = [
     {
         path: "/villages",
         element: <Villages/>
+    },
+    {
+        path: "users/:userId/profile",
+        element: <Profile/> 
     },
     {
         path: "/villages/:villageId",

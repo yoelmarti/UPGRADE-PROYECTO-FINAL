@@ -114,23 +114,6 @@ const Footer = () => {
             <div className="mt-2">
                 © Copyright 2022-year. All Rights Reserved.
             </div>
-            <div className="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-                <a href="#" className="w-6 mx-1">
-                    <i className="uil uil-facebook-f"></i>
-                </a>
-                <a href="#" className="w-6 mx-1">
-                    <i className="uil uil-twitter-alt"></i>
-                </a>
-                <a href="#" className="w-6 mx-1">
-                    <i className="uil uil-youtube"></i>
-                </a>
-                <a href="#" className="w-6 mx-1">
-                    <i className="uil uil-linkedin"></i>
-                </a>
-                <a href="#" className="w-6 mx-1">
-                    <i className="uil uil-instagram"></i>
-                </a>
-            </div>
         </div>
     </div>
     </footer>

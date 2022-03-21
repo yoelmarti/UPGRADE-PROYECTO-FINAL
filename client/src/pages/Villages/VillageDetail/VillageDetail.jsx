@@ -23,8 +23,8 @@ const VillageDetail = () => {
       try {
         fetch(`http://localhost:4000/villages/${villageId}/houses`)
         .then((res)=>{return res.json()})
-        .then((data)=>{
-            const pueblo = data.data.info[0].houses;
+        .then((data)=>{ 
+          const pueblo = data.data.info[0].houses;
             setHouseList(pueblo);
 
         })

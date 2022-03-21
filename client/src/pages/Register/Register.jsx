@@ -26,7 +26,7 @@ const Register = () => {
             birthdate: registerFormData.birthdate,
             profession: registerFormData.profession,
             children: registerFormData.children,
-            avatar: registerFormData.avatar,
+            avatar: registerFormData.avatar || 'http://localhost:4000/public/avatar.png',
         }
 
         try {
@@ -59,13 +59,20 @@ const Register = () => {
         setRegisterFormData({...registerFormData, [name]: value});
     };
 
+    const handleFocus = (ev) =>{
+        console.log(ev)
+    }
+
     return (
         <div className='min-h-screen flex items-stretch text-white relative'>
         <div className="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center bg-[url('https://images.unsplash.com/photo-1620581261303-e905d1dbe0eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')]">
             <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
             <div className="w-full px-24 z-10">
                 
-                <p className="text-4xl font-medium text-left tracking-wide">Descubre lo bueno que es vivir en el corazón de un pueblo.</p>
+                <p className="text-4xl font-medium text-left tracking-wide">La ventaja de registrarte.</p>
+                <ul className='pt-6 marker:text-[#744253]'>
+                    <li className='list-disc list-inside pl-6'>Visualiza las casas disponibles en cada pueblo</li>
+                </ul>
             </div>
         
         </div>
@@ -78,39 +85,39 @@ const Register = () => {
                 <form className='sm:w-2/3 w-full px-4 lg:px-0 mx-auto' onSubmit={submitForm}>
                     <div className='pb-2 pt-4'>
                         
-                        <input type='text' name='name' placeholder='Nombre' value={registerFormData.name} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black' ></input>
+                        <input required type='text' name='name' placeholder='Nombre' value={registerFormData.name} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black' ></input>
                     </div>
 
                     <div className='pb-2 pt-4'>
-                        <input type='text' name='email' placeholder='Email' value={registerFormData.email} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                        <input required type='text' name='email' placeholder='Email' value={registerFormData.email} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
                     </div>
 
                     <div className='pb-2 pt-4'>
-                        <input type='password' name='password' placeholder='Contraseña' value={registerFormData.password} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                        <input required pattern='^(?=.*[0-9])(?=.*[a-z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8,}$' type='password' name='password' placeholder='Contraseña' value={registerFormData.password} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
                     </div>
 
                     <div className='pb-2 pt-4'>
-                        <input type='date' name='birthdate'  placeholder='MM/DD/YYYY' value={registerFormData.birthdate} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                        <input required type='text' onClick={handleFocus} name='birthdate'  placeholder='Fecha de nacimiento: dd/mm/aaaa' value={registerFormData.birthdate} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
                     </div>
 
                     <div className='pb-2 pt-4'>
-                        <input type='text' name='profession' placeholder='Profesión' value={registerFormData.profession} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                        <input required type='text' name='profession' placeholder='Profesión' value={registerFormData.profession} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
                     </div>
 
                     <div className='pb-2 pt-4'>
-                        <input type='text' name='children' placeholder='Hijos' value={registerFormData.children} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                        <input required type='text' name='children' placeholder='Nº Hijos' value={registerFormData.children} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                    </div>
+
+                    <div className='pb-2 pt-4 '>
+                        <input placeholder='URL de tu foto de perfil' type='file' name='avatar' value={registerFormData.avatar} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black file:rounded-full file:bg-[#744253] file:border-0 hover:file:bg-bg-[#CC998D] file:font-normal file:mr-4 file:py-2 file:px-4 file:text-sm text-sm' ></input>
                     </div>
 
                     <div className='pb-2 pt-4'>
-                        <input placeholder='URL de tu foto de perfil' type='text' name='avatar' value={registerFormData.avatar} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black' ></input>
-                    </div>
-
-                    <div className='pb-2 pt-4'>
-                        <input type='checkbox' className='accent-[#744253]'></input>
+                        <input required type='checkbox' className='accent-[#744253]'></input>
                         <span className='lg:text-black md:text-white'>Acepto la política de privacidad y el Aviso Legal</span>
                     </div>
                     <div className='px-4 pb-2 pt-4'>
-                        <button type='submit' className='uppercase block w-full p-4 text-lg rounded-full bg-[#744253] hover:bg-[#CC998D] focus:outline-none '>Registrarme</button>
+                        <button type='submit' className='uppercase block w-full p-4 text-lg rounded-full bg-[#744253] hover:bg-[#CC998D] focus:outline-none'>Registrarme</button>
                     </div>
                     <p className='lg:text-black md:text-white'>¿Ya estas registrado? <Link to='/iniciar-sesion' className='hover:text-[#CC998D]'>Inicia sesión</Link></p>
                 </form>
