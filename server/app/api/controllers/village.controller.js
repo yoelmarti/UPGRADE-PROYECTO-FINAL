@@ -41,6 +41,7 @@ const getVillageById = async (req, res, next) => {
 
 const getHousesByVillage = async (req, res, next) => {
     try {
+    
         const {id} = req. params;
         if(req.query.page) {
             const page = parseInt(req.query.page);
@@ -61,7 +62,7 @@ const getHousesByVillage = async (req, res, next) => {
         });
         }
     } catch (error) {
-        
+        return next(error);
     }
 }
 

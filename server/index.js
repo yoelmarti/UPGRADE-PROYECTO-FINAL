@@ -1,5 +1,6 @@
 const express = require('express');
 const logger = require('morgan');
+const bodyParser = require('body-parser');
 //Importamos conexión a db y ejecutamos la conexión
 const { PORT } = require('./app/database/connect');
 const userRouter = require('./app/api/routes/user.routes');
@@ -30,6 +31,9 @@ server.use((req, res, next) => {
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
+
+// server.use(bodyParser.json())
+// server.use(bodyParser.urlencoded({ extended: true }));
 
 server.set("secretKey", process.env.SECRET_SESSION); 
 

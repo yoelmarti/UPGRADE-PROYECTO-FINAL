@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 //TODO  authMiddleware
 const { isAuth, authRole, ROLE } = require('../../middlewares/auth.middleware');
-const {upload} = require('../../middlewares/file.middleware');
+const { upload } = require('../../middlewares/file.middleware');
 const { check } = require('express-validator');
 
 const {
@@ -14,7 +14,8 @@ const {
 } = require('../controllers/user.controller');
 
 
-router.post('/register', [
+router.post('/register', 
+[
     check('name')
         .not()
         .isEmpty()
@@ -32,8 +33,9 @@ router.post('/register', [
         // .matches(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)
         .withMessage('Password must contain at least one letter, at least one number, and be longer than six charaters.'),        
     check('children')
-        .isNumeric()
-], [upload.single('avatar')],
+        .isNumeric(),
+], 
+[upload.single('avatar')],
 registerUser);
 
 router.post('/login', loginUser);
