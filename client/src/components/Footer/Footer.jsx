@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="p-5 w-1/2 sm:w-4/12 md:w-3/12">
  
             <div className="text-xs uppercase text-gray-400 font-medium mb-6">
-                Getting Started
+                Aviso Legal
             </div>
             {/* <a href="#" className="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
                 Installation
@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="p-5 w-1/2 sm:w-4/12 md:w-3/12">
             
             <div className="text-xs uppercase text-gray-400 font-medium mb-6">
-                Core Concepts
+                Política de Privacidad
             </div>
 
             {/* <a href="#" className="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
         <div className="p-5 w-1/2 sm:w-4/12 md:w-3/12">
             <div className="text-xs uppercase text-gray-400 font-medium mb-6">
-                Customization
+                Política de Cookies
             </div>
 
             {/* <a href="#" className="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
         <div className="p-5 w-1/2 sm:w-4/12 md:w-3/12">
             <div className="text-xs uppercase text-gray-400 font-medium mb-6">
-                Community
+                Contacto
             </div>
 
             {/* <a href="#" className="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
@@ -112,7 +112,7 @@ const Footer = () => {
             border-t border-gray-500 text-gray-400 text-sm 
             flex-col md:flex-row max-w-6xl">
             <div className="mt-2">
-                © Copyright 2022-year. All Rights Reserved.
+                © Copyright Grupo2 FSD 2022. Todos los derechos reservados.
             </div>
             <div className="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
                 <a href="#" className="w-6 mx-1">
