@@ -9,7 +9,7 @@ const NavBar = () => {
   const { id } = useParams();
 
   return (
-    <div className='shadow-2xl'>
+    <div className='shadow-2xl relative bg-[#CC998D]'>
       <nav className='flex flex-row justify-around h-[70px] items-center'>
           <Link to='/'>
             <img className='h-[70px]' src={`http://localhost:4000/public/app-logo.png`} alt='app-logo'></img>

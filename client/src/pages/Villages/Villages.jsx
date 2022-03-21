@@ -73,8 +73,8 @@ const Villages = () => {
         <div className='flex flex-wrap -m-4'>
           {villagesList.map((village)=>{return(
             <div key={village._id} className="p-4 sm:w-1/2 lg:w-1/3">
-              <div className='h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden drop-shadow-2xl bg-white hover:bg-[#744253] hover:text-[#ECEBE4] transition duration-300 ease-in'>
-                <img src={`http://localhost:4000/public' ${village.image}`} alt={village.name} className='lg:h-72 md:h-48 w-full object-cover object-center'/>
+              <div className='h-full border-2 border-white hover:border-[#744253] border-opacity-60 rounded-lg overflow-hidden drop-shadow-2xl bg-white hover:bg-[#744253] hover:text-[#ECEBE4] transition duration-300 ease-in'>
+                <img src={`http://localhost:4000/public' ${village.image}`} alt={village.name} className='lg:h-72 md:h-48 w-full object-cover object-center rounded-b-lg'/>
                 <div className='p-6'>
                   <h2 className='text-base font-medium text-[#CC998D] mb-1'>{village.name}</h2>
                   <p className='text-2xl font-semibold mb-3'>{village.location.region}</p>
@@ -83,10 +83,6 @@ const Villages = () => {
                     <Link to={`./${village._id}`}>
                       <p className='inline-flex items-center md:mb-2 lg:mb-0 hover:animate-bounce hover:delay-300'>Ver pueblo</p> 
                     </Link>
-                    <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                    </svg>
                   </div>
                 </div>
               </div>
