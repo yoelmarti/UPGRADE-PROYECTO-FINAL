@@ -1,4 +1,4 @@
 .bg-gradient-nav{
     background: rgb(204,153,141);
-    background: linear-gradient(90deg, rgba(204,153,141,1) 0%, rgba(72,22,32,1) 100%);
+    /* background: linear-gradient(90deg, rgba(204,153,141,1) 0%, rgba(72,22,32,1) 100%); */
 }

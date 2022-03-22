@@ -69,9 +69,11 @@ const Register = () => {
             <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
             <div className="w-full px-24 z-10">
                 
-                <p className="text-4xl font-medium text-left tracking-wide">La ventaja de registrarte.</p>
+                <p className="text-4xl font-medium text-left tracking-wide">Crea tu cuenta y podrás:</p>
                 <ul className='pt-6 marker:text-[#744253]'>
-                    <li className='list-disc list-inside pl-6'>Visualiza las casas disponibles en cada pueblo</li>
+                    <li className='list-disc list-inside pl-6'>Visualizar las casas disponibles en cada pueblo</li>
+                    <li className='list-disc list-inside pl-6'>Contactar con los Ayuntamientos</li>
+                    <li className='list-disc list-inside pl-6'>Colaborar a revitalizar nuestros pueblos</li>
                 </ul>
             </div>
         
@@ -114,12 +116,12 @@ const Register = () => {
 
                     <div className='pb-2 pt-4'>
                         <input required type='checkbox' className='accent-[#744253]'></input>
-                        <span className='lg:text-black md:text-white'>Acepto la política de privacidad y el Aviso Legal</span>
+                        <span className='lg:text-black md:text-white'>Acepto la Política de Privacidad y el Aviso Legal</span>
                     </div>
                     <div className='px-4 pb-2 pt-4'>
-                        <button type='submit' className='uppercase block w-full p-4 text-lg rounded-full bg-[#744253] hover:bg-[#CC998D] focus:outline-none'>Registrarme</button>
+                        <button type='submit' className='uppercase block w-full p-4 text-lg rounded-full bg-[#744253] hover:bg-[#CC998D] focus:outline-none'>CREAR CUENTA</button>
                     </div>
-                    <p className='lg:text-black md:text-white'>¿Ya estas registrado? <Link to='/iniciar-sesion' className='hover:text-[#CC998D]'>Inicia sesión</Link></p>
+                    <p className='lg:text-black md:text-white'>¿Ya tienes cuenta? <Link to='/iniciar-sesion' className='hover:text-[#CC998D]'>Inicia sesión</Link></p>
                 </form>
             </div>
         </div>

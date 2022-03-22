@@ -45,10 +45,11 @@ const Villages = () => {
 
   return (
     <div className='bg-[#ECEBE4]'>
+    <p class="w-3/5 m-auto pl-[50px] pb-4 text-7xl text-[#481620]">Nuestros Pueblos</p>
       <div className='container px-5 py-24 mx-auto'>
         <div className='text-center h-[200px] pt-10'>
           <select onChange={handleChange} className='text-white block w-full p-4 text-lg rounded-md bg-[#744253]'>
-            <option value="">Todas</option>
+            <option value="">Todas las provincias</option>
             <option value="Albacete">Albacete</option>
             <option value="Álava">Álava</option>
             <option value="Ávila">Ávila</option>

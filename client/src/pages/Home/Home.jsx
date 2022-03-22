@@ -4,10 +4,12 @@ import MapView from '../../components/MapView/MapView'
 
 const Home = () => {
   return (
+
     <section className="relative  bg-blueGray-50">
     <div className="relative pt-16 pb-32 flex content-center items-center justify-center h-[500px]">
             <div className="absolute top-0 w-full h-full bg-center bg-cover bg-[url('https://ep00.epimg.net/elviajero/imagenes/2016/01/29/album/1454068637_170439_1454079257_album_normal.jpg')]" >
-              <span id="blackOverlay" className="w-full h-full absolute opacity-25 bg-black"></span>
+              <span id="blackOverlay" className="w-full h-full absolute opacity-70 bg-black"></span>
+
             </div>
             <div class="container relative mx-auto">
               <div class="items-center flex flex-wrap">
