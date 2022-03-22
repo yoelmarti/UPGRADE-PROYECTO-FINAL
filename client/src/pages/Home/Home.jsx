@@ -13,9 +13,10 @@ const Home = () => {
                 <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                   <div class="pr-12">
                     <h1 class="text-white font-semibold text-5xl">
-                      ¿Buscas un pueblo para vivir?
+                      Pueblo Busca Familia
                     </h1>
-                    <button className='font-medium text-white hover:text-black uppercase w-full block p-4 mt-[40px] text-lg rounded-full bg-[#744253] drop-shadow-2xl hover:bg-[#CC998D] focus:outline-none'><Link to='villages'>Pueblos</Link></button>
+                    <h3 class="text-white font-semibold text-2xl">La plataforma que ayuda a los pueblos a que no cierren sus colegios</h3>
+                    <button className='font-medium text-white hover:text-black uppercase w-full block p-4 mt-[40px] text-lg rounded-full bg-[#744253] drop-shadow-2xl hover:bg-[#CC998D] focus:outline-none'><Link to='villages'>Ver Pueblos</Link></button>
                   </div>
                 </div>
               </div>
@@ -35,9 +36,9 @@ const Home = () => {
                       <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-[#CC998D]">
                         <i class="fas fa-award"></i>
                       </div>
-                      <h6 class="text-xl font-semibold">Consulta los requisitos</h6>
+                      <h6 class="text-xl font-semibold">Ayuntamientos</h6>
                       <p class="mt-2 mb-4 text-blueGray-500">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor lacinia nibh, a pharetra lorem viverra a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;.
+                      ¿Estarías dispuesto a ofrecer una casa a una familia a cambio de que sus hijos se matriculen en tu escuela?
                       </p>
                     </div>
                   </div>
@@ -48,9 +49,9 @@ const Home = () => {
                       <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-[#4C6663]">
                         <i class="fas fa-retweet"></i>
                       </div>
-                      <h6 class="text-xl font-semibold">Free Revisions</h6>
+                      <h6 class="text-xl font-semibold">Familias</h6>
                       <p class="mt-2 mb-4 text-blueGray-500">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor lacinia nibh, a pharetra lorem viverra a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;.
+                      ¿Quieres que tus hijos crezcan en un entorno rural y asumir menos gastos fijos mensuales? ¿Te imaginas no tener que pagar un alquiler?
                       </p>
                     </div>
                   </div>
@@ -61,9 +62,9 @@ const Home = () => {
                       <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-[#481620]">
                         <i class="fas fa-fingerprint"></i>
                       </div>
-                      <h6 class="text-xl font-semibold">Verified Company</h6>
+                      <h6 class="text-xl font-semibold">Tu Plataforma</h6>
                       <p class="mt-2 mb-4 text-blueGray-500">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor lacinia nibh, a pharetra lorem viverra a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;.
+                      Si has respondido afirmativamente a alguna de las preguntas anteriores has llegado al sitio correcto. Inicia sesión para ver las casas disponibles en cada pueblo :)
                       </p>
                     </div>
                   </div>
