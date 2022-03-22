@@ -1,28 +1,53 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { UserContextLogin } from '../../contexts/UserContext/UserContextLogin';
 
 const Profile = () => {
-    const {user} = useContext(UserContextLogin)
+    const {user, token } = useContext(UserContextLogin)
     const {userId} = useParams();
+    const [profile, setProfile] = useState(user)
     // console.log(user)
 
-    try {
-        fetch(`http://localhost:4000/users/${userId}/profile`)
-        .then((res)=>{return res.json()})
-        .then((data)=>{ 
-        //   console.log(data)
-        })
-    } catch (error) {
-        console.error(error)
-    }
+    useEffect(()=>{
+        try {
+            fetch(`http://localhost:4000/users/${userId}/profile`, {
+              method: "GET",
+              headers: {
+                Authorization: "Bearer " + token,
+              },
+            })
+            .then((res) => {return res.json();})
+            .then((data) => {
+              console.log(data.data);
+              setProfile(data.data);
+              console.log(profile);
+            });
+        } catch (error) {
+          console.error(error);
+        }
+    },[token, userId])
+
+
+
+    // const handleEditUser = async () => {
+    //     const request = await fetch('http://localhost:4000/users/login', {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(loginData)
+    //         });
+    // }
   
+
+
     return (
     <div>
-        <p>{user.name}</p>
-        <p>{user.email}</p>
-        <img src={`http://localhost:4000/public/${user.avatar}`} alt='avatar'/>
+        {/* <p>{profile.name}</p>
+        <p>{profile.email}</p>
+        <img src={profile.avatar} alt='avatar'/> */}
         <p></p>
+        <button >Borrar cuenta</button>
     </div>
   )
 }

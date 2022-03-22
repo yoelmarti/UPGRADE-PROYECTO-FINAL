@@ -43,6 +43,7 @@ registerUser);
 router.post('/login', loginUser);
 router.post('/logout', isAuth, logoutUser);
 router.get('/:id/profile', isAuth, authRole(ROLE.USER), getUserProfile);
+
 router.get('/:id/profile/delete', isAuth, /*authRole(ROLE.USER),*/ deleteUser);
 router.put('/update-user/:id', isAuth, authRole(ROLE.USER), updateUserData);
 
