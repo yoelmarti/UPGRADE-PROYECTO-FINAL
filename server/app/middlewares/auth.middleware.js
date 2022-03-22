@@ -5,7 +5,6 @@ const User = require('../api/models/user.model');
 // Is a user authenticated?
 const isAuth = (req, res, next) => {
     const authorization = req.headers.authorization;
-    console.log(req.headers);
     if (!authorization) {
         return res.json({
             status: 401,
