@@ -18,11 +18,11 @@ const NavBar = () => {
               <Link to='/registro' className='pl-6'>Registro</Link>
             }
             {user ? 
-              <Link to={`/users/${user._id}/profile`} className='pl-6' ><img src={`http://localhost:4000/public/profile-icon.svg`} alt='perfil'/></Link> :
+              <Link to={`/users/${user._id}/profile`} className='w-[25px] ml-6' ><img src={`http://localhost:4000/public/profile-icon.svg`} alt='perfil'/></Link> :
               <img className='w-[25px]' src={`http://localhost:4000/public/slash-icon.svg`} alt='slash'/>
             }
             {user ? 
-              <img className='cursor-pointer ml-2 w-[20px]' onClick={logoutUser} src={`http://localhost:4000/public/logout-icon.svg`} alt='logout'/> : 
+              <img className='cursor-pointer ml-6 w-[20px]' onClick={logoutUser} src={`http://localhost:4000/public/logout-icon.svg`} alt='logout'/> : 
               <Link to='/iniciar-sesion' className=''>Login</Link>
             }
           </div>

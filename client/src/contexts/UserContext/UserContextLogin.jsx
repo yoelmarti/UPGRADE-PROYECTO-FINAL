@@ -9,11 +9,9 @@ export const UserContextLogin = React.createContext()
 const sessionUser = localStorage.getItem('user');
 
 export const UserProvider = ({children}) => {
-    const { setToken } = useToken();
-
+    const { setToken, token } = useToken();
     const navigate = useNavigate();
     const [user, setUser] = useState(sessionUser ? JSON.parse(sessionUser) : null);
-    
     
     const loginUser = async (loginData, prevRoute) => {
         // const {email, password} = loginData
@@ -37,9 +35,9 @@ export const UserProvider = ({children}) => {
     
     if(token){
         setUser(response.data.user);
+        navigate(prevRoute || '/');
         // setToken(loginData)
         // localStorage.setItem('user', JSON.stringify(existsUser));
-        navigate(prevRoute || '/');
         // console.log(existsUser)
     } else {
         setUser(false);
@@ -49,7 +47,7 @@ export const UserProvider = ({children}) => {
     }
     }
 
-    const logoutUser = (prevRoute) => {
+    const logoutUser = () => {
         setUser(null);
         localStorage.removeItem('user');
         localStorage.removeItem('token');
@@ -57,6 +55,7 @@ export const UserProvider = ({children}) => {
     };
 
     const userLoginState = {
+        token,
         user,
         loginUser,
         logoutUser

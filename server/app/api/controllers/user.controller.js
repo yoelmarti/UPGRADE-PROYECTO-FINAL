@@ -15,29 +15,19 @@ const registerUser = async (req, res, next) => {
         //   if (!result.isEmpty()) {
         //     return res.status(422).json({ errors: result.array() });
         //   }
-        
+
         const userAvatar = req.file ? req.file.filename : null;
         // const newUser = new User();
         const newUser = new User();
-            newUser.name= req.body.name;
-            newUser.email = req.body.email;
-            newUser.password = req.body.password;
-            newUser.avatar = userAvatar;
-            newUser.children = req.body.children;
-            newUser.birthDate = req.body.birthDate;
-            newUser.profession = req.body.profession;
-            newUser.role = ROLE.USER;
-            // { 
-            //     name: req.body.name,
-            //     email: req.body.email,
-            //     password: req.body.password,
-            //     avatar: userAvatar,
-            //     children: req.body.children,
-            //     birthDate: req.body.birthDate,
-            //     profession: req.body.profession,
-            //     role: ROLE.USER,
-            // }
-       
+        newUser.name = req.body.name;
+        newUser.email = req.body.email;
+        newUser.password = req.body.password;
+        newUser.avatar = userAvatar;
+        newUser.children = req.body.children;
+        newUser.birthDate = req.body.birthDate;
+        newUser.profession = req.body.profession;
+        newUser.role = ROLE.USER;
+
         const userDb = await newUser.save();
         res.json({
             status: 201,
@@ -45,15 +35,15 @@ const registerUser = async (req, res, next) => {
             data: null,
         })
     } catch (error) {
-        next(error);        
+        next(error);
     }
 };
 
 
 const loginUser = async (req, res, next) => {
     try {
-        const userInfo = await User.findOne({email: req.body.email})
-        if(!userInfo) {
+        const userInfo = await User.findOne({ email: req.body.email })
+        if (!userInfo) {
             return res.status(401).json({
                 message: "Authentication failed"
             })
@@ -63,7 +53,7 @@ const loginUser = async (req, res, next) => {
             const token = jwt.sign(
                 {
                     id: userInfo._id,
-                    email: userInfo.email,  
+                    email: userInfo.email,
                     role: userInfo.role
                 },
                 req.app.get("secretKey"),
@@ -72,11 +62,12 @@ const loginUser = async (req, res, next) => {
                 }
             );
             res.status(200).json({
-                
+
                 expiresIn: 10000,
-                data: { user: userInfo,
-                        token: token
-                        }
+                data: {
+                    user: userInfo,
+                    token: token
+                }
             })
         } else {
             return res.json({
@@ -111,6 +102,7 @@ const getUserProfile = async (req, res, next) => {
             message: httpStatusCode[200],
             data: {
                 userId: user._id,
+                name: user.name,
                 email: user.email,
                 password: user.password,
                 avatar: user.avatar,
@@ -129,9 +121,9 @@ const getUserProfile = async (req, res, next) => {
 const updateUserData = async (req, res, next) => {
     try {
         const userId = req.params.id;
-        const user = await User.findByIdAndUpdate( userId, {
+        const user = await User.findByIdAndUpdate(userId, {
             $set: req.body
-        }, {new:true});
+        }, { new: true });
         return res.json({
             status: 200,
             message: httpStatusCode[200],
@@ -142,10 +134,41 @@ const updateUserData = async (req, res, next) => {
     }
 };
 
+
+const deleteUser = async (req, res, next) => {
+    try {
+        console.log("req.authority", req.authority);
+        const userId = req.params.id;
+        const authority = req.authority.id;
+        const userFound = await User.findById(userId);
+
+        if (authority === (userFound._id).toString()) {
+            const userDeleted = await User.findByIdAndDelete(userId);
+            res.json({
+                status: 200,
+                message: "User succesfully deleted",
+                data: { deletedUser: userDeleted }
+            })
+        }
+        else {
+            return res.json({
+                status: 400,
+                message: "Unable to delete user"
+            })
+        }
+
+    } catch (error) {
+    return next(error)
+    }
+}
+
+
+
 module.exports = {
     registerUser,
     loginUser,
     logoutUser,
     getUserProfile,
-    updateUserData
+    updateUserData,
+    deleteUser
 }
