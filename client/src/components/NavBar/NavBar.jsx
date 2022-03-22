@@ -10,7 +10,7 @@ const NavBar = () => {
     <div className='shadow-2xl relative bg-gradient-nav text-white'>
       <nav className='flex flex-row h-[70px] items-center'>
           <div className='pl-10 basis-1/2'>
-            <Link to='/'><img className='h-[70px]' src={`http://localhost:4000/public/app-logo.png`} alt='app-logo'/></Link>
+            <Link to='/'><img className='h-[70px]' src={`http://localhost:4000/public/logo8b.png`} alt='app-logo'/></Link>
           </div>
           <div className='flex justify-end basis-1/2 pr-14'>
           <Link to='villages'>Pueblos</Link>
