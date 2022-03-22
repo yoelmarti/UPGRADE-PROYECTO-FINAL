@@ -11,7 +11,8 @@ const {
     loginUser,
     logoutUser,
     getUserProfile,
-    updateUserData
+    updateUserData,
+    deleteUser
 } = require('../controllers/user.controller');
 
 
@@ -42,6 +43,8 @@ registerUser);
 router.post('/login', loginUser);
 router.post('/logout', isAuth, logoutUser);
 router.get('/:id/profile', isAuth, authRole(ROLE.USER), getUserProfile);
-router.put('/update-user/:id', /*isAuth, authRole(ROLE.USER)*/ updateUserData);
+
+router.get('/:id/profile/delete', isAuth, /*authRole(ROLE.USER),*/ deleteUser);
+router.put('/update-user/:id', isAuth, authRole(ROLE.USER), updateUserData);
 
 module.exports = router;

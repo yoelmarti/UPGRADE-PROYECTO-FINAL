@@ -12,11 +12,10 @@ const {
 
 router.get('/', getAllVillages);
 
-//router.get('/:id', [isAuth], getVillageById);
-//router.get('/:id/houses', [isAuth], getHousesByVillage);
 
 router.get('/:id', getVillageById);
 router.get('/:id/houses', isAuth, /*authRole(ROLE.USER),*/ getHousesByVillage);
+
 router.put('/update-village/:id', authRole(ROLE.USER), updateVillageData)
 
 module.exports = router;

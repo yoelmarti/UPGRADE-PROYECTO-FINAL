@@ -33,16 +33,15 @@ const VillageDetail = () => {
           .then((res) => {
             return res.json();
           })
-
-          .then((data) => {
-            // console.log(data);
-            // console.log(user);
-            const pueblo = data.data.info[0].houses;
+        .then((data)=>{ 
+          console.log(data.data);
+          const pueblo = data.data.info[0].houses;
             setHouseList(pueblo);
-          });
-      } catch (error) {
-        console.error(error);
-      }
+        })
+        
+    } catch (error) {
+        console.error(error)
+    }
     } catch (error) {
       console.error(error);
     }
