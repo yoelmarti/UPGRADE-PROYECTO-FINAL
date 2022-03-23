@@ -34,7 +34,6 @@ const VillageDetail = () => {
             return res.json();
           })
         .then((data)=>{ 
-          console.log(data.data);
           const pueblo = data.data.info[0].houses;
             setHouseList(pueblo);
         })

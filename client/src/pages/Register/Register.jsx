@@ -95,7 +95,7 @@ const Register = () => {
                     </div>
 
                     <div className='pb-2 pt-4'>
-                        <input required pattern='^(?=.*[0-9])(?=.*[a-z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8,}$' type='password' name='password' placeholder='Contraseña' value={registerFormData.password} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                        <input required type='password' name='password' placeholder='Contraseña' value={registerFormData.password} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
                     </div>
 
                     <div className='pb-2 pt-4'>
