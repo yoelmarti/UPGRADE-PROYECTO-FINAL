@@ -29,6 +29,42 @@ const Profile = () => {
 
 
 
+    useEffect(()=>{
+        try {
+            fetch(`http://localhost:4000/users/${userId}/profile`)
+            .then(res => res.json())
+            .then(
+              (result) => {
+                
+              }
+            )
+
+
+
+            fetch(`http://localhost:4000/users/update-user/${userId}`, {
+                method: "PUT",
+                headers: {
+                    Authorization: "Bearer " + token,
+                },
+            })
+            .then((res) => {return res.json();})
+            .then((data) => {
+                console.log(data.data);
+                setProfile(data.data);
+                console.log(profile);
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    },[token, userId])
+
+
+
+
+
+
+
+
     // const handleEditUser = async () => {
     //     const request = await fetch('http://localhost:4000/users/login', {
     //             method: 'POST',

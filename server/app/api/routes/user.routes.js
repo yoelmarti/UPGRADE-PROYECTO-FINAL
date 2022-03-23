@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
-//TODO  authMiddleware
 const { isAuth } = require('../../middlewares/auth.middleware');
-const { authRole, ROLE } = require('../../middlewares/roles.middleware');
+// const { authRole, ROLE } = require('../../middlewares/roles.middleware');
 const { upload } = require('../../middlewares/file.middleware');
 const { check } = require('express-validator');
 
@@ -31,9 +30,11 @@ router.post('/register',
         .not()
         .isEmpty()
         .isLength({ min: 8, max: 20 })
-        //Password must contain at least one letter, at least one number, and be longer than six charaters.
-        // .matches(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)
-        .withMessage('Password must contain at least one letter, at least one number, and be longer than six charaters.'),        
+        //Password must contain at least one 1 numeric character, 1 lowercase letter, 1 uppercase letter and 1 special character
+        .matches(
+            /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$/,
+            )
+        .withMessage('Password must contain at least one 1 numeric character, 1 lowercase letter, 1 uppercase letter and 1 special character'),        
     check('children')
         .isNumeric(),
 ], 
@@ -41,10 +42,10 @@ router.post('/register',
 registerUser);
 
 router.post('/login', loginUser);
-router.post('/logout', isAuth, logoutUser);
-router.get('/:id/profile', isAuth, authRole(ROLE.USER), getUserProfile);
+router.post('/logout', logoutUser);
+router.get('/:id/profile', isAuth, /*authRole(ROLE.USER),*/ getUserProfile);
 
 router.get('/:id/profile/delete', isAuth, /*authRole(ROLE.USER),*/ deleteUser);
-router.put('/update-user/:id', isAuth, authRole(ROLE.USER), updateUserData);
+router.put('/update-user/:id', isAuth, /*authRole(ROLE.USER),*/ updateUserData);
 
 module.exports = router;
