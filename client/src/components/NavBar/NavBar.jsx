@@ -13,7 +13,7 @@ const NavBar = () => {
             <Link to='/'><img className='h-[70px]' src={`http://localhost:4000/public/logo8b.png`} alt='app-logo'/></Link>
           </div>
           <div className='flex justify-end basis-1/2 pr-14'>
-          <Link to='villages'>Pueblos</Link>
+          <Link to='pueblos'>Pueblos</Link>
             {user ? null :
               <Link to='/registro' className='pl-6'>Registro</Link>
             }

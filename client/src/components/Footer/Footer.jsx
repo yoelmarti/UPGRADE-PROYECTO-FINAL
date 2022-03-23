@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="p-5 w-1/2 sm:w-4/12 md:w-3/12">
  
             <div className="text-xs uppercase text-gray-400 font-medium mb-6">
-                Aviso Legal
+                <a href="#">Aviso Legal</a>
             </div>
             {/* <a href="#" className="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
                 Installation
@@ -35,7 +35,8 @@ const Footer = () => {
         <div className="p-5 w-1/2 sm:w-4/12 md:w-3/12">
             
             <div className="text-xs uppercase text-gray-400 font-medium mb-6">
-                Política de Privacidad
+                <a href="#">Política de Privacidad</a>
+                
             </div>
 
             {/* <a href="#" className="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
@@ -62,7 +63,7 @@ const Footer = () => {
         </div>
         <div className="p-5 w-1/2 sm:w-4/12 md:w-3/12">
             <div className="text-xs uppercase text-gray-400 font-medium mb-6">
-                Política de Cookies
+                <a href="#">Política de Cookies</a>
             </div>
 
             {/* <a href="#" className="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
@@ -89,7 +90,7 @@ const Footer = () => {
         </div>
         <div className="p-5 w-1/2 sm:w-4/12 md:w-3/12">
             <div className="text-xs uppercase text-gray-400 font-medium mb-6">
-                Contacto para Ayuntamientos
+                <a href="#">Contacto para Ayuntamientos</a>
             </div>
 
             {/* <a href="#" className="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
