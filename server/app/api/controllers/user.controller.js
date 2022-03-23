@@ -8,13 +8,13 @@ const { validationResult } = require('express-validator');
 //Registro de usuario
 const registerUser = async (req, res, next) => {
     try {
-        // const errorFormatter = ({ location, msg, param, value, nestedErrors }) => {
-        //     return `[${param}]: ${msg}`;
-        //   };
-        //   const result = validationResult(req).formatWith(errorFormatter);
-        //   if (!result.isEmpty()) {
-        //     return res.status(422).json({ errors: result.array() });
-        //   }
+        const errorFormatter = ({ location, msg, param, value, nestedErrors }) => {
+            return `[${param}]: ${msg}`;
+          };
+          const result = validationResult(req).formatWith(errorFormatter);
+          if (!result.isEmpty()) {
+            return res.status(422).json({ errors: result.array() });
+          }
 
         const userAvatar = req.file ? req.file.filename : null;
         // const newUser = new User();
