@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const { isAuth } = require('../../middlewares/auth.middleware');
-// const { authRole, ROLE } = require('../../middlewares/roles.middleware');
-const { upload } = require('../../middlewares/file.middleware');
+
+const { authRole, ROLE } = require('../../middlewares/roles.middleware');
+const { upload, uploadToCloudinary } = require('../../middlewares/file.middleware');
+
 const { check } = require('express-validator');
 
 const {
@@ -37,15 +39,18 @@ router.post('/register',
         .withMessage('Password must contain at least one 1 numeric character, 1 lowercase letter, 1 uppercase letter and 1 special character'),        
     check('children')
         .isNumeric(),
+        
 ], 
-[upload.single('avatar')],
+[upload.single('avatar'), uploadToCloudinary],
 registerUser);
 
 router.post('/login', loginUser);
 router.post('/logout', logoutUser);
 router.get('/:id/profile', isAuth, /*authRole(ROLE.USER),*/ getUserProfile);
 
-router.get('/:id/profile/delete', isAuth, /*authRole(ROLE.USER),*/ deleteUser);
-router.put('/update-user/:id', isAuth, /*authRole(ROLE.USER),*/ updateUserData);
+
+router.delete('/:id/profile/delete', isAuth, /*authRole(ROLE.USER),*/ deleteUser);
+router.put('/:id/update-user', isAuth, authRole(ROLE.USER), updateUserData);
+
 
 module.exports = router;
