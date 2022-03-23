@@ -3,7 +3,7 @@ const router = express.Router();
 //TODO  authMiddleware
 const { isAuth } = require('../../middlewares/auth.middleware');
 const { authRole, ROLE } = require('../../middlewares/roles.middleware');
-const { upload } = require('../../middlewares/file.middleware');
+const { upload, uploadToCloudinary } = require('../../middlewares/file.middleware');
 const { check } = require('express-validator');
 
 const {
@@ -36,15 +36,16 @@ router.post('/register',
         .withMessage('Password must contain at least one letter, at least one number, and be longer than six charaters.'),        
     check('children')
         .isNumeric(),
+        
 ], 
-[upload.single('avatar')],
+[upload.single('avatar'), uploadToCloudinary],
 registerUser);
 
 router.post('/login', loginUser);
 router.post('/logout', isAuth, logoutUser);
 router.get('/:id/profile', isAuth, authRole(ROLE.USER), getUserProfile);
 
-router.get('/:id/profile/delete', isAuth, /*authRole(ROLE.USER),*/ deleteUser);
-router.put('/update-user/:id', isAuth, authRole(ROLE.USER), updateUserData);
+router.delete('/:id/profile/delete', isAuth, /*authRole(ROLE.USER),*/ deleteUser);
+router.put('/:id/update-user', isAuth, authRole(ROLE.USER), updateUserData);
 
 module.exports = router;
