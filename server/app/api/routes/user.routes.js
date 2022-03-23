@@ -36,7 +36,7 @@ router.post('/register',
         .matches(
             /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$/,
             )
-        .withMessage('Password must contain at least one 1 numeric character, 1 lowercase letter, 1 uppercase letter and 1 special character'),        
+        .withMessage('Password must be at least 8 character long and max 20, contain at least one 1 numeric character, 1 lowercase letter, 1 uppercase letter and 1 special character'),        
     check('children')
         .isNumeric(),
         

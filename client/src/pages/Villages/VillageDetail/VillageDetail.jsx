@@ -207,7 +207,7 @@ const VillageDetail = () => {
               <div>
                 <p className="text-center">
                   Si quieres ver las casas disponibles tienes que{" "}
-                  <Link to="/iniciar-sesion">Iniciar Sesion</Link>
+                  <Link to="/iniciar-sesion">Iniciar Sesión</Link>
                 </p>
               </div>
             ) : null}

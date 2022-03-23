@@ -17,7 +17,7 @@ const routes = [
         element: <Home/>,
     },
     {
-        path: "/villages",
+        path: "/pueblos",
         element: <Villages/>
     },
     {
@@ -25,7 +25,7 @@ const routes = [
         element: <Profile/> 
     },
     {
-        path: "/villages/:villageId",
+        path: "/pueblos/:villageId",
         element: <VillageDetail/> 
     },
     {
