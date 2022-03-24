@@ -44,10 +44,10 @@ const Villages = () => {
     }
 
   return (
-    <div className='bg-[#ECEBE4]'>
+    <div className='block bg-[#ECEBE4] h-full'>
       <div className='container px-5 py-24 mx-auto'>
         <p className="w-3/5 m-auto pl-[50px] pb-4 text-7xl text-[#481620] text-center">Nuestros Pueblos</p>
-        <div className='text-center h-[200px] pt-10'>
+        <div className='text-center h-[200px] pt-10 relative'>
           <select onChange={handleChange} className='text-white block w-full p-4 text-lg rounded-md bg-[#744253]'>
             <option value="">Todas las provincias</option>
             <option value="Albacete">Albacete</option>
@@ -68,8 +68,6 @@ const Villages = () => {
             <option value="Valladolid">Valladolid</option>
             <option value="Zamora">Zamora</option>
           </select>
-          {/* <input value={provincia} onChange={handleChange} className='w-[300px] border-2 rounded-md border-black'></input> */}
-          {/* <button onClick={searchProvincia}>Buscar</button> */}
         </div>
         <div className='flex flex-wrap -m-4'>
           {villagesList.map((village)=>{return(

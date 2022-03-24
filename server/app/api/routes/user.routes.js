@@ -38,7 +38,7 @@ router.post('/register',
             )
         .withMessage('Password must contain at least one 1 numeric character, 1 lowercase letter, 1 uppercase letter and 1 special character'),        
     check('children')
-        .isNumeric(),
+        .isNumeric({min: 1, max: 10}),
         
 ], 
 [upload.single('avatar'), uploadToCloudinary],

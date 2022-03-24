@@ -6,10 +6,10 @@ const INITIAL_STATE_REGISTER = {
     name: '',
     email: '',
     password: '',
-    birthdate: '',
+    birthDate: '',
     profession:'',
     children:'',
-    avatar: '',
+    // avatar: '',
 }
 
 const Register = () => {
@@ -23,10 +23,10 @@ const Register = () => {
             name: registerFormData.name,
             email: registerFormData.email,
             password: registerFormData.password,
-            birthdate: registerFormData.birthdate,
+            birthDate: registerFormData.birthDate,
             profession: registerFormData.profession,
             children: registerFormData.children,
-            avatar: registerFormData.avatar || 'http://localhost:4000/public/avatar.png',
+            // avatar: registerFormData.avatar || 'http://localhost:4000/public/avatar.png',
         }
 
         try {
@@ -58,10 +58,6 @@ const Register = () => {
         const {name, value} = ev.target;
         setRegisterFormData({...registerFormData, [name]: value});
     };
-
-    const handleFocus = (ev) =>{
-        console.log(ev)
-    }
 
     return (
         <div className='min-h-screen flex items-stretch text-white relative'>
@@ -99,7 +95,7 @@ const Register = () => {
                     </div>
 
                     <div className='pb-2 pt-4'>
-                        <input required type='text' onClick={handleFocus} name='birthdate'  placeholder='Fecha de nacimiento: dd/mm/aaaa' value={registerFormData.birthdate} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
+                        <input required type='text' name='birthDate'  placeholder='Fecha de nacimiento: dd/mm/aaaa' value={registerFormData.birthDate} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
                     </div>
 
                     <div className='pb-2 pt-4'>
@@ -110,9 +106,9 @@ const Register = () => {
                         <input required type='text' name='children' placeholder='Nº Hijos' value={registerFormData.children} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black'></input>
                     </div>
 
-                    <div className='pb-2 pt-4 '>
+                    {/* <div className='pb-2 pt-4 '>
                         <input placeholder='URL de tu foto de perfil' type='file' name='avatar' value={registerFormData.avatar} onChange={handleInput} className='block w-full p-4 text-lg rounded-md bg-black file:rounded-full file:bg-[#744253] file:border-0 hover:file:bg-bg-[#CC998D] file:font-normal file:mr-4 file:py-2 file:px-4 file:text-sm text-sm' ></input>
-                    </div>
+                    </div> */}
 
                     <div className='pb-2 pt-4'>
                         <input required type='checkbox' className='accent-[#744253]'></input>
