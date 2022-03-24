@@ -66,20 +66,24 @@ const VillageDetail = () => {
               alt={villageDetail.name}
             />
 
-            <div className="flex w-3/5 m-auto pt-4 pl-5">
+            <div className="flex w-3/5 m-auto pt-4">
               <img
                 className="w-[22px]"
                 src={`http://localhost:4000/public/location-icon.svg`}
                 alt="location"
               />
-              <span> {villageDetail.location.province},</span>
-              <span className=" ml-3">{villageDetail.location.region}</span>
-              <div className="flex pl-[550px]">
-                <img
-                  src={`http://localhost:4000/public/population-icon.svg`}
-                  alt="Habitantes"
-                />
-                <span className="ml-4">{villageDetail.population}</span>
+              <div className="w-full flex justify-between">
+                <div>
+                  <span> {villageDetail.location.province},</span>
+                  <span className=" ml-3">{villageDetail.location.region}</span>
+                </div>
+                <div className="flex">
+                  <img
+                    src={`http://localhost:4000/public/population-icon.svg`}
+                    alt="Habitantes"
+                  />
+                  <span className="ml-4">{villageDetail.population}</span>
+                </div>
               </div>
             </div>
 
@@ -137,23 +141,18 @@ const VillageDetail = () => {
               </div>
             </div>
           </div>
-          <div className="text-center mt-20">
+          <div className="text-center mt-10">
             <Link to="https://kuartango.eus/" path="https://kuartango.eus/">
               {villageDetail.web}
             </Link>
           </div>
         </div>
 
-        <div className="text-center pt-[80px]">
-          <button
-            className="w-[180px] h-[45px] rounded-full bg-[#4C6663] hover:bg-[#CC998D] font-normal text-white"
-            onClick={handleClick}
-          >
-            ver casas
-          </button>
+        <div className="text-center pt-[50px]">
+          <button className="w-[180px] h-[45px] rounded-full bg-[#4C6663] hover:bg-[#CC998D] font-normal text-white" onClick={handleClick}>ver casas</button>
         </div>
-        <div className="pt-[50px] lg:pt-[80px] pb-10 lg:pb-20 text-[#481620] font-medium">
-          <div className="container px-5 py-24 mx-auto">
+        <div className="pt-[50px] pb-[50px] text-[#481620] font-medium">
+          <div className="container px-5 mx-auto">
             <div className="flex flex-wrap -m-4">
               {user && showHouses
                 ? houseList.map((house) => {
@@ -203,6 +202,24 @@ const VillageDetail = () => {
                   })
                 : null}
             </div>
+            {user && showHouses ?
+            <div>
+                <form className="w-full mx-auto max-w-3xl bg-white shadow p-8 text-gray-700 ">
+                    <div>
+                      <p className="w-full my-2 text-3xl font-bold leading-tight">Si te interesa alguna casa, puedes contactar con el ayuntamiento.</p>
+                      <div className="flex flex-wrap mb-6">
+                      <div className="relative w-full appearance-none label-floating">
+                          <textarea className="autoexpand tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+                              id="message" type="text" placeholder="Message..."></textarea>
+                              <label className="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">Mensaje...
+                          </label>
+                      </div>
+                      </div>
+                    <button className="w-full shadow bg-[#4C6663] hover:bg-[#CC998D] focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full" type="submit">Contacta</button>
+                  </div>
+                </form>
+              </div> 
+              : null}
             {!user && showHouses ? (
               <div>
                 <p className="text-center">

@@ -36,7 +36,7 @@ const Home = () => {
                   <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                     <div className="px-4 py-5 flex-auto">
                       <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-[#CC998D]">
-                        <i className="fas fa-award"></i>
+                      <img className='w-[30px]' src={`http://localhost:4000/public/house-home.svg`} alt='family'/>
                       </div>
                       <h6 className="text-xl font-semibold">Ayuntamientos</h6>
                       <p className="mt-2 mb-4 text-blueGray-500">
@@ -49,7 +49,7 @@ const Home = () => {
                   <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                     <div className="px-4 py-5 flex-auto">
                       <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-[#4C6663]">
-                        <i className="fas fa-retweet"></i>
+                        <img className='w-[30px]' src={`http://localhost:4000/public/family-svgrepo-com.svg`} alt='family'/>
                       </div>
                       <h6 className="text-xl font-semibold">Familias</h6>
                       <p className="mt-2 mb-4 text-blueGray-500">
@@ -62,7 +62,7 @@ const Home = () => {
                   <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                     <div className="px-4 py-5 flex-auto">
                       <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-[#481620]">
-                        <i className="fas fa-fingerprint"></i>
+                      <img className='w-[30px]' src={`http://localhost:4000/public/web-ui-svgrepo-com.svg`} alt='family'/>
                       </div>
                       <h6 className="text-xl font-semibold">Tu Plataforma</h6>
                       <p className="mt-2 mb-4 text-blueGray-500">

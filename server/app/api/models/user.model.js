@@ -12,7 +12,7 @@ const userSchema = new Schema(
         password: { type: String, required: true },
         avatar: { type: String },
         children: { type: Number, required: true },
-        birthdate: { type: Date },
+        birthDate: { type: String },
         profession: { type: String },
         role: { type: String},
         houses: [ { type: mongoose.Types.ObjectId, ref: 'houses' }],

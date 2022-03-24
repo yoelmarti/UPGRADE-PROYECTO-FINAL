@@ -4,7 +4,6 @@ const Home = React.lazy(()=>import('../pages/Home/Home.jsx'));
 const NotFound = React.lazy(()=>import('../pages/NotFound/NotFound'));
 const Villages = React.lazy (()=>import('../pages/Villages/Villages'));
 const VillageDetail = React.lazy (()=>import('../pages/Villages/VillageDetail/VillageDetail'));
-const Houses = React.lazy(()=>import('../pages/Villages/VillageDetail/Houses/Houses.jsx'))
 const Register = React.lazy (()=>import('../pages/Register/Register'));
 const LogIn = React.lazy (()=>import('../pages/LogIn/LogIn'));
 const Profile = React.lazy (()=>import('../pages/Profile/Profile'));
@@ -27,10 +26,6 @@ const routes = [
     {
         path: "/pueblos/:villageId",
         element: <VillageDetail/> 
-    },
-    {
-        path: "/houses",
-        element: <Houses/> 
     },
     {
         path: "/registro",
